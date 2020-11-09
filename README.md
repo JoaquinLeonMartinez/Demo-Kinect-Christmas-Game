@@ -1,2 +1,2 @@
 # ChristmasWithKinect
-Christmas poroject with Kinect
+Christmas project with Kinect
