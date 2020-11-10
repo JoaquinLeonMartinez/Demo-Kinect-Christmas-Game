@@ -73,7 +73,6 @@ public class Controll : MonoBehaviour
             position = player.transform.localPosition;
             if (position.y < 3)
             {
-                Debug.Log("Vamos a la derecha");
                 player.transform.localPosition = position + new Vector3(0, 3, 0) * Time.deltaTime * velocity;
             }
         }
@@ -82,7 +81,6 @@ public class Controll : MonoBehaviour
             position = player.transform.localPosition;
             if (position.y > -3)
             {
-                Debug.Log("Vamos a la izquierda");
                 player.transform.localPosition = position + new Vector3(0, -3, 0) * Time.deltaTime * velocity;
             }
         }
