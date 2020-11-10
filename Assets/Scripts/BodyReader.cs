@@ -37,8 +37,9 @@ public class BodyReader : MonoBehaviour
     public float JumpThreshold;
 
     //Rango que definirá cuando el jugador se ha inclinado a cualquiera de los dos lados
-    public float RightThreshold;
-    public float LeftThreshold;
+    //public float RightThreshold;
+    public float Threshold = 0.1f;
+    //public float LeftThreshold = 0.1f;
 
     //Tiempo que se le deja al jugador para colocarse bien
     public float RecordTime = 1.0f;
@@ -59,7 +60,7 @@ public class BodyReader : MonoBehaviour
         //Buscar el hombro izquierdo como referencia
         if (ShoulderLeft == null)
         {
-            ShoulderLeft = GameObject.Find("ShoulderLeft");
+            ShoulderLeft = GameObject.Find("ShoulderLeft"); //TODO: esto vamos a tener que cambiarlo (UNA OPCION ES PARAMETRIZAR ESTO, EL PROBLEMA ES QUE ELESQUELETO SE GENERA EN TIEMPO REAL)
         }
         if (ShoulderRight == null)
         {
@@ -67,9 +68,9 @@ public class BodyReader : MonoBehaviour
         }
 
         //En cuanto la kinect detecte el esqueleto, llamará a la función para identificar la posición inicial base
-        if (lastWasNull && (ShoulderLeft != null))
+        if (lastWasNull && (ShoulderLeft != null)) //Con el lastWasNull limita que solo haya uno, que es el primero que pilla (esto en realidad no esta tan mal) ademas lo recalcula por cada verz que entra en pantalla uno nuevo
         {
-            Invoke("RecordInitialPosition", RecordTime);
+            Invoke("RecordInitialPosition", RecordTime); //en lugar de llamar directamente al metodo espera un segundo para que el jugador se colque correctamente
         }
 
         //Aquí, una vez se detecta el esqueleto, se calcula la posición del hombro izquierdo y dereho (deteción salto)
@@ -110,6 +111,36 @@ public class BodyReader : MonoBehaviour
 
         //Ahora se realizará lo mismo para realizar los movimientos de izquierda y derecha
         //Derecha
+        if (StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) > Threshold) && (InitialYPositionLeft != 0) && contador == 0) //no deberia ser un valor absoluto¿? -- no
+        {
+            onRight.Invoke();
+            StandRight = false;
+            contador = 1;
+        }
+        else if (!StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) < Threshold))
+        {
+            stopRight.Invoke();
+            StandRight = true;
+            contador = 0;
+        }
+        //Izquierda
+        if (StandLeft && ((ShoulderLeftPos.y - InitialYPositionLeft) < Threshold) && (InitialYPositionLeft != 0) && contador == 0)
+        {
+            onLeft.Invoke();
+            StandLeft = false;
+            contador = 1;
+        }
+        else if (!StandLeft && ((ShoulderLeftPos.y - InitialYPositionLeft) > Threshold))
+        {
+            stopLeft.Invoke();
+            StandLeft = true;
+            contador = 0;
+        }
+    }
+
+    /*
+     New Version:
+            //Derecha
         if (StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) > RightThreshold) && (InitialYPositionLeft != 0) && contador == 0)
         {
             onRight.Invoke();
@@ -135,7 +166,36 @@ public class BodyReader : MonoBehaviour
             StandLeft = true;
             contador = 0;
         }
-    }
+
+
+     Old version:
+            //Derecha
+        if (StandRight && ((ShoulderLeftPos.x - InitialXPosition) > RightThreshold) && (InitialXPosition != 0) && contador == 0)
+        {
+            onRight.Invoke();
+            StandRight = false;
+            contador = 1;
+        }
+        else if (!StandRight && ((ShoulderLeftPos.x - InitialXPosition) < RightThreshold))
+        {
+            stopRight.Invoke();
+            StandRight = true;
+            contador = 0;
+        }
+        //Izquierda
+        if (StandLeft && ((ShoulderLeftPos.x - InitialXPosition) < LeftThreshold) && (InitialXPosition != 0) && contador == 0)
+        {
+            onLeft.Invoke();
+            StandLeft = false;
+            contador = 1;
+        }
+        else if (!StandLeft && ((ShoulderLeftPos.x - InitialXPosition) > LeftThreshold))
+        {
+            stopLeft.Invoke();
+            StandLeft = true;
+            contador = 0;
+        }
+     */
 
     void CheckDirection(Vector3 shoulderRightPos, Vector3 shoulderLeftPos, float threshold)
     {
@@ -150,7 +210,7 @@ public class BodyReader : MonoBehaviour
     //Aquí se guardarán las coordenadas de referencia iniciales
     private void RecordInitialPosition()
     {
-        isGrounded = true;
+        //isGrounded = true; //al no haber salto esto nos da igual
         InitialYPositionLeft = ShoulderLeftPos.y;
         InitialYPositionRight = ShoulderRightPos.y;
         InitialXPosition = ShoulderLeftPos.x;

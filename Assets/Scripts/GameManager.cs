@@ -69,7 +69,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log($"Se han generado {maxPresents} puntos");
+        //Debug.Log($"Se han generado {maxPresents} puntos");
     }
 
     public void SetFixNumOfPresents(int presentsToGenerate) //comprobar eficiencia de esto, podria no ser la mejor
@@ -102,7 +102,7 @@ public class GameManager : MonoBehaviour
         }
 
         UIManager.UpdateScore(score, maxPresents);
-        Debug.Log($"Se acaba de actualizar la puntuación a {score}");
+        //Debug.Log($"Se acaba de actualizar la puntuación a {score}");
     }
 
 
