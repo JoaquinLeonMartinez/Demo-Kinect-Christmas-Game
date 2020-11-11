@@ -26,6 +26,8 @@ public class Controll : MonoBehaviour
     //Velocidad a la que se realizará el movimiento de transición
     public float velocity;
 
+    Vector3 originalPos;
+
     //Movimiento Update
     [SerializeField]
     bool goRight = false;
@@ -35,6 +37,7 @@ public class Controll : MonoBehaviour
     void Start()
     {
         //rb = player.GetComponent<Rigidbody>(); //No se usara de momento ya que no se puede saltar
+        originalPos = player.transform.localPosition;
     }
 
     void Update()
@@ -110,6 +113,11 @@ public class Controll : MonoBehaviour
     public void Jump()
     {
         //rb.AddForce(Vector3.up * jumpForce); //TODO: qUITAR SI FINALMENTE NO HAY SALTO
+    }
+
+    public void ResetControll()
+    {
+        player.transform.localPosition = originalPos;
     }
 }
 

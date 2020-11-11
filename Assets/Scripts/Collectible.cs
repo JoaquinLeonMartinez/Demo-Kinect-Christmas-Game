@@ -12,10 +12,10 @@ public class Collectible : MonoBehaviour
 
     void Start()
     {
-        rotateSpeed = 2f;
+        rotateSpeed = 100f;
     }
 
-    public void Setup(int _value = 1, CollectibleType _collectibleType = CollectibleType.Points, float _rotateSpeed = 2f)
+    public void Setup(int _value = 1, CollectibleType _collectibleType = CollectibleType.Points, float _rotateSpeed = 100f)
     {
         value = _value;
         collectibleType = _collectibleType;
@@ -27,7 +27,7 @@ public class Collectible : MonoBehaviour
 
         if (collectibleType == CollectibleType.Points) // solo rotan los regalos, no los aros de energia
         {
-            transform.Rotate(0, 1*rotateSpeed, 0);
+            transform.Rotate(0, rotateSpeed * Time.deltaTime, 0);
         }
     }
 
@@ -43,6 +43,11 @@ public class Collectible : MonoBehaviour
         }
         
         Debug.Log("Has recogido un objeto :D");
+        DestroyCollectible();
+    }
+
+    public void DestroyCollectible()
+    {
         Destroy(gameObject);
     }
 }

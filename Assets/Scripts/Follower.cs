@@ -21,4 +21,9 @@ public class Follower : MonoBehaviour
         transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
         transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
     }
+
+    public void ResetFollower()
+    {
+        distanceTravelled = 0;
+    }
 }

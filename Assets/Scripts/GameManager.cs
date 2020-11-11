@@ -8,11 +8,17 @@ public class GameManager : MonoBehaviour
 
     public int score; //regalos que ha recogido el jugador
     public int maxPresentsScore; //numero totoal de regalos que se generan en la escena
-    public int maxEnergyInScenario; // no es necesario de momento pero por si se quisiera utilizar
-    public int presentSpawnRate;
+    public int maxPresents;
+    public int targetScore;
+    public bool prices;
+    public int smallPresents;
+    public int mediumPresents;
+    public int bigPresents;
+    public int maxEnergyInScenario;
+
     public static GameManager Instance;
 
-    //[SerializeField] GameObject[] presentPoints; //lisa de puntos en los que pueden estar los regalos
+    [SerializeField] GameObject playerController;
     [SerializeField] UI_Manager UIManager;
     [SerializeField] EnergyBar energyBar;
     int currentEnergy;
@@ -20,7 +26,7 @@ public class GameManager : MonoBehaviour
     float timeElapsed; //Es el tiempo que ha pasado
     float energyUnitValue;
 
-    [SerializeField] List<GameObject> presentPoints;
+    [SerializeField] List<GameObject> collectiblePoints;
     [SerializeField] GameObject collectable;
 
     [SerializeField] GameObject collectiblePrefab;
@@ -45,40 +51,16 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        //ENERGY BAR 
-        maxEnergy = 20;
-        currentEnergy = maxEnergy;
-        timeElapsed = 0;
-        energyUnitValue = 2;
-        //END ENERGY BAR
-
-
-        //GAMEPLAY
-        //maxEnergyInScenario = 0; //DE MOMENTO NO LO ESTAMOS USANDO
-        maxPresentsScore = 0; //empieza habiendo 0
-        score = 0;
-        presentPoints = new List<GameObject>();
-        SetUpPresentsPoints();
-        presentSpawnRate = 100; //% de spawn de regalos
-        //Generar regalos
-        //caso 1: se genera un numero aleatrio con un indice de probabilidad (de este modo en cada partida habra una cantidad diferente de regalos)
-        //SetPresents();
-        SetPresentsMegaRandom();
-
-        //caso 2: se genera un numero fijo de regalos pero en cada partida estaran en un sitio diferente
-        //maxPresents = 40; //EN EL CASO 2 LO INDICAMOS NOSOTROS
-        //SetFixNumOfPresentsBetter(maxPresents);
-        //ENDGAMEPLAY
-
-        //UI
-        energyBar.setMaxEnergy(maxEnergy);
-        UpdateScore(score);
-        //END UI
+        collectiblePoints = new List<GameObject>();
+        SetupPresentsPoints();
+        SetUpGame();
     }
 
     private void Update()
     {
-        
+
+        DebugFuntion(); //borrar antes de subir
+
         timeElapsed += Time.deltaTime; //con esto sabremos cuanto tiempo ha pasado
 
         if (timeElapsed >= energyUnitValue)
@@ -90,48 +72,28 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void DebugFuntion()
+    {
+        //Debug.Log($"Numero total de regalos: {maxPresents}");
+        //Debug.Log($"Numero total de regalos: {maxPresents}");
+    }
+
     void CheckEnergy()//a este metodo habra que llamarlo cada vez que decrementamos la energía
     {
         if (currentEnergy <= 0)
         {
-            Application.Quit(); //en el futuro esto puede ser un volver al menu
+            CheckScore();
+            this.GetComponent<PauseGame>().SetPause();
         }
     }
-    public void SetPresents() //en este modo no siempre habra el mismo numero de regalos
+
+    void CheckScore()//comprobamos si ha conseguido el premio
     {
-        foreach (var p in presentPoints)
+        if(score >= targetScore)
         {
-            if (Random.Range(1,100) <= presentSpawnRate)
-            {
-                p.SetActive(true);
-                if (p.GetComponent<Collectible>().collectibleType == CollectibleType.Points)
-                {
-                    maxPresentsScore += p.GetComponent<Collectible>().value;
-                }
-            }
+            Debug.Log("Enhorabuena, te llevas un fantastico masajeador de pies!!");
+            //TODO: Aqui habra que comprobar si quedan premios o no y actuar en consecuencia
         }
-
-        //Debug.Log($"Se han generado {maxPresents} puntos");
-    }
-
-    public void SetFixNumOfPresents(int presentsToGenerate) //comprobar eficiencia de esto, podria no ser la mejor
-    {
-        if (presentsToGenerate > presentPoints.Count) //esto no debe darse nunca, causaria un bucle infinito
-        {
-            return;
-        }
-        //int pendingPresents = maxPresents;
-        while (presentsToGenerate  > 0)
-        {
-            int randomPos = Random.Range(0, presentPoints.Count);
-            if (!presentPoints[randomPos].activeSelf) //si ese regalo no esta activo ya lo activamos, sino volvemos a intentar
-            {
-                presentPoints[randomPos].SetActive(true);
-                presentsToGenerate--;
-                Debug.Log($"Quedan por generar {presentsToGenerate} regalos");
-            }
-        }
-
     }
 
     public void UpdateScore(int _score)
@@ -154,77 +116,247 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void SetFixNumOfPresentsBetter(int presentsToGenerate) //version mejorada
-    {
-        if (presentsToGenerate > presentPoints.Count) //esto no debe darse nunca, causaria un bucle infinito
-        {
-            return;
-        }
-
-        List<GameObject> auxList = new List<GameObject>();
-
-        while (presentsToGenerate > 0)
-        {
-            int randomPos = Random.Range(0, presentPoints.Count);
-            if (!presentPoints[randomPos].activeSelf)
-            {
-                presentPoints[randomPos].SetActive(true); //lo activamos
-                auxList.Add(presentPoints[randomPos]); //add to aux list
-                presentPoints.Remove(presentPoints[randomPos]); //lo eliminamos de la lista para la siguiente iteracion
-                Debug.Log("Hemos activado un objeto, el tamaño de la lista origal es " + presentPoints.Count);
-                presentsToGenerate--;
-            }
-        }
-
-        for (int i = 0; i < auxList.Count; i++) //volvemos a completar la lista original
-        {
-            presentPoints.Add(auxList[i]);
-        }
-        Debug.Log("La lista vuelve a su tamaño original:  " + presentPoints.Count);
-
-        auxList.Clear();
-
-    }
-
-    void SetUpPresentsPoints()
+    void SetupPresentsPoints()
     {
         foreach (Transform child in collectable.transform)
         {
-          presentPoints.Add(child.gameObject);
+            collectiblePoints.Add(child.gameObject);
+            //comprobar si estos tienen hijos, si los tienen hay que destruirlos
         }
     }
 
-    void SetUpGame()
+    public void ResetGame()
     {
-        /*
-         * A partir de una serie de puntos generar X regalos
-         * A partir de una serie de puntos generar X puntos
-         * A partir de una serie de puntos generar X energia
-         */
+        playerController.GetComponent<Follower>().ResetFollower();
+        playerController.GetComponent<Controll>().ResetControll();
+        ResetCollectables();
+        SetUpGameReset();
     }
 
-    public void SetPresentsMegaRandom() //en este modo no siempre habra el mismo numero de regalos
+    public void SetUpGame()
     {
-        //esto seria partiendo de una serie de puntos (los puntos serian puntos de verdad)
-        foreach (var p in presentPoints)
-        {
-            if (Random.Range(1, 100) <= presentSpawnRate)
-            {
-                var newObject = Instantiate(collectiblePrefab, p.transform);
-                CollectibleType newType = (Random.Range(1, 3) == 1) ?  CollectibleType.Energy : CollectibleType.Points;
+        //ENERGY BAR 
+        maxEnergy = 20;
+        currentEnergy = maxEnergy;
+        timeElapsed = 0;
+        energyUnitValue = 2;
+        //END ENERGY BAR
 
-                if (newType == CollectibleType.Points)
-                {
-                    newObject.GetComponent<Collectible>().Setup(Random.Range(1, 4), CollectibleType.Points);
-                    maxPresentsScore += newObject.GetComponent<Collectible>().value;
-                }
-                else
-                {
-                    newObject.GetComponent<Collectible>().Setup(Random.Range(1, 4), CollectibleType.Energy);
-                }
+
+        //GAMEPLAY
+        prices = true; //si quedan premios o no en el centro comercial (add que cada hora se actualice)
+        maxEnergyInScenario = 5; //aros de energía que encontraremos
+        maxPresents = 15; //numero de regalos en la escena
+        maxPresentsScore = 30; //numero maximo de puntos que podremos sumar (deben de ser mayor que el maxPresents)
+        score = 0; //puntuacion actual
+        targetScore = 20; //puntuacion objetivo
+        //La propia funcion de generar calcula cuantos habra de cada tipo (distribuye los puntos en el numero de regalos)
+        smallPresents = 0;
+        mediumPresents = 0;
+        bigPresents = 0;
+
+        if (CheckGameRules()) //comprobamos que los valores sean coherentes
+        {
+            Debug.Log("Los parametros son correctos, vamos a generar los collectible");
+            GenerateGameCollectables();
+        }
+        else
+        {
+            Debug.Log("Los parametros no son correctos hulio");
+        }
+ 
+        //ENDGAMEPLAY
+
+        //UI
+        energyBar.setMaxEnergy(maxEnergy);
+        UpdateScore(score);
+        //END UI
+    }
+
+    public void SetUpGameReset()
+    {
+        //ENERGY BAR 
+        maxEnergy = 20;
+        currentEnergy = maxEnergy;
+        timeElapsed = 0;
+        energyUnitValue = 2;
+        //END ENERGY BAR
+
+
+        //GAMEPLAY
+        prices = true; //si quedan premios o no en el centro comercial (add que cada hora se actualice)
+        maxEnergyInScenario = 5; //aros de energía que encontraremos
+        maxPresents = 15; //numero de regalos en la escena
+        maxPresentsScore = 30; //numero maximo de puntos que podremos sumar (deben de ser mayor que el maxPresents)
+        score = 0; //puntuacion actual
+        targetScore = 20; //puntuacion objetivo
+        //La propia funcion de generar calcula cuantos habra de cada tipo (distribuye los puntos en el numero de regalos)
+        smallPresents = 0;
+        mediumPresents = 0;
+        bigPresents = 0;
+
+        Debug.Log("Vamos a comprobar si todo es correcto:");
+        
+        if (CheckGameRules()) //comprobamos que los valores sean coherentes
+        {
+            Debug.Log("Los parametros son correctos, vamos a generar los collectible");
+            GenerateGameCollectables();
+        }
+        else
+        {
+            Debug.Log("Los parametros no son correctos hulio");
+        }
+        
+        //ENDGAMEPLAY
+
+        //UI
+        energyBar.setMaxEnergy(maxEnergy);
+        UpdateScore(score);
+        //END UI
+    }
+
+    public void GenerateGameCollectables()
+    {
+        DivideRatesFunction(maxPresentsScore, maxPresents);
+        Generate(maxPresents, maxEnergyInScenario);
+    }
+    public void DivideRatesFunction(int pointsToDistribute, int numOfPresents)
+    {
+
+        if (!prices) //si no quedan premios el limite sera menor que el target
+        {
+            pointsToDistribute = targetScore - 1;
+        }
+
+        int i = 0;
+        int maxRandom = 4;
+        while (i < numOfPresents && (pointsToDistribute > (numOfPresents - (mediumPresents + bigPresents))))
+        {
+            bool validRandom = false;
+            int random = Random.Range(2, maxRandom);
+            if (random == 2 && (pointsToDistribute > (numOfPresents - (mediumPresents + bigPresents))))
+            {
+                pointsToDistribute -= 2;
+                mediumPresents++;
+                validRandom = true;
+            }
+            else if (random == 3 && (pointsToDistribute > ((numOfPresents - (mediumPresents + bigPresents)) + 1)))
+            {
+                pointsToDistribute -= 3;
+                bigPresents++;
+                validRandom = true;
+            }
+            else if (random == 3 && !(pointsToDistribute > ((numOfPresents - (mediumPresents + bigPresents)) + 1)))
+            {
+                maxRandom = 3; //descartamos los regalos de 3 puntos
+            }
+
+            if (validRandom)
+            {
+                i++;
             }
         }
+        //Debug.Log($"Suma final de los que restan de un punto: smallPresents: {smallPresents} + points to distribute restantes: {pointsToDistribute}");
+        smallPresents += pointsToDistribute; //esto sumara 0 en caso de haberlos distribuido todos antes
+        Debug.Log($"Se han distribuido correctamente los valores de los regalos, small = {smallPresents} , medium = {mediumPresents} , big = {bigPresents}");
 
-        //Debug.Log($"Se han generado {maxPresentsScore} puntos");
     }
+
+    public void Generate(int presentsToGenerate, int eneryToGenerate)
+    {
+        List<GameObject> auxList = new List<GameObject>();
+
+        //Ahora vamos con los aros de energia:
+
+        while (eneryToGenerate > 0)
+        {
+            int randomPos = Random.Range(0, collectiblePoints.Count);
+                //instanciate
+            var newObject = Instantiate(collectiblePrefab, collectiblePoints[randomPos].transform);
+            newObject.GetComponent<Collectible>().Setup(1, CollectibleType.Energy);
+
+            auxList.Add(collectiblePoints[randomPos]); //add to aux list
+            collectiblePoints.Remove(collectiblePoints[randomPos]); //lo eliminamos de la lista para la siguiente iteracion
+
+            eneryToGenerate--; //esto dependera del random que se haya generado
+        }
+
+        Debug.Log("Se han generado correctamente los aros de energia");
+
+        //Ahora vamos con los regalos:
+
+        while (presentsToGenerate > 0)
+        {
+            int randomPos = Random.Range(0, collectiblePoints.Count);
+            int newValue = 0;
+            if (bigPresents > 0)
+            {
+                newValue = 3;
+                bigPresents--;
+            }
+            else if (mediumPresents > 0)
+            {
+                newValue = 2;
+                mediumPresents--;
+            }
+            else
+            {
+                newValue = 1;
+                smallPresents--;//esto realmente no es necesario
+            }
+
+            var newObject = Instantiate(collectiblePrefab, collectiblePoints[randomPos].transform);
+            newObject.GetComponent<Collectible>().Setup(newValue, CollectibleType.Points);
+
+            auxList.Add(collectiblePoints[randomPos]); //add to aux list
+            collectiblePoints.Remove(collectiblePoints[randomPos]); //lo eliminamos de la lista para la siguiente iteracion
+
+            presentsToGenerate--; //esto dependera del random que se haya generado
+
+        }
+
+        Debug.Log("Se han generado correctamente los regalos");
+
+        for (int i = 0; i < auxList.Count; i++) //volvemos a completar la lista original
+        {
+            collectiblePoints.Add(auxList[i]);
+        }
+        Debug.Log("La lista vuelve a su tamaño original:  " + collectiblePoints.Count);
+
+        auxList.Clear();
+    }
+
+    public bool CheckGameRules() //validaciones
+    {
+        bool correct = true;
+
+        if (!(maxEnergyInScenario + maxPresents <= collectiblePoints.Count))
+        {
+            Debug.Log($"No cuadra la energia con el nuemro de slots disponible en el escenario, energia = {maxEnergyInScenario} , maxPresents = {maxPresents} , slots = {collectiblePoints.Count}");
+            correct = false;
+            return correct;
+        }
+
+        if (targetScore > maxPresentsScore)
+        {
+            Debug.Log($"No cuadra la target score, targetScore = {targetScore} , maxPresentsScore = {maxPresentsScore}");
+            correct = false;
+            return correct;
+        }
+
+        return correct;
+    }
+
+    void ResetCollectables()
+    {
+        foreach (var p in collectiblePoints)
+        {
+            foreach (Transform child in p.transform)
+            {
+                child.GetComponent<Collectible>().DestroyCollectible();
+            }
+        }
+    }
+
 }
+
