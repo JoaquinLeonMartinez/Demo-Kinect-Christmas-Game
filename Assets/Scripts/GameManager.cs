@@ -130,7 +130,7 @@ public class GameManager : MonoBehaviour
         playerController.GetComponent<Follower>().ResetFollower();
         playerController.GetComponent<Controll>().ResetControll();
         ResetCollectables();
-        SetUpGameReset();
+        SetUpGame();
     }
 
     public void SetUpGame()
@@ -157,7 +157,7 @@ public class GameManager : MonoBehaviour
 
         if (CheckGameRules()) //comprobamos que los valores sean coherentes
         {
-            Debug.Log("Los parametros son correctos, vamos a generar los collectible");
+            //Debug.Log("Los parametros son correctos, vamos a generar los collectible");
             GenerateGameCollectables();
         }
         else
@@ -165,48 +165,6 @@ public class GameManager : MonoBehaviour
             Debug.Log("Los parametros no son correctos hulio");
         }
  
-        //ENDGAMEPLAY
-
-        //UI
-        energyBar.setMaxEnergy(maxEnergy);
-        UpdateScore(score);
-        //END UI
-    }
-
-    public void SetUpGameReset()
-    {
-        //ENERGY BAR 
-        maxEnergy = 20;
-        currentEnergy = maxEnergy;
-        timeElapsed = 0;
-        energyUnitValue = 2;
-        //END ENERGY BAR
-
-
-        //GAMEPLAY
-        prices = true; //si quedan premios o no en el centro comercial (add que cada hora se actualice)
-        maxEnergyInScenario = 5; //aros de energía que encontraremos
-        maxPresents = 15; //numero de regalos en la escena
-        maxPresentsScore = 30; //numero maximo de puntos que podremos sumar (deben de ser mayor que el maxPresents)
-        score = 0; //puntuacion actual
-        targetScore = 20; //puntuacion objetivo
-        //La propia funcion de generar calcula cuantos habra de cada tipo (distribuye los puntos en el numero de regalos)
-        smallPresents = 0;
-        mediumPresents = 0;
-        bigPresents = 0;
-
-        Debug.Log("Vamos a comprobar si todo es correcto:");
-        
-        if (CheckGameRules()) //comprobamos que los valores sean coherentes
-        {
-            Debug.Log("Los parametros son correctos, vamos a generar los collectible");
-            GenerateGameCollectables();
-        }
-        else
-        {
-            Debug.Log("Los parametros no son correctos hulio");
-        }
-        
         //ENDGAMEPLAY
 
         //UI
