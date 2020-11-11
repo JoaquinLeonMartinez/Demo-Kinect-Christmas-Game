@@ -10,6 +10,8 @@ public class Collectible : MonoBehaviour
     public int value; //puntos que sumara al ser recogido
     public CollectibleType collectibleType;
 
+    public GameObject scoreSpritePrefab;
+
     void Start()
     {
         rotateSpeed = 100f;
@@ -39,6 +41,10 @@ public class Collectible : MonoBehaviour
         }
         else
         {
+            
+            GameObject childObject = Instantiate(scoreSpritePrefab, this.transform) as GameObject;
+            childObject.transform.parent = this.transform.parent;
+
             GameManager.Instance.UpdateScore(value);
         }
         

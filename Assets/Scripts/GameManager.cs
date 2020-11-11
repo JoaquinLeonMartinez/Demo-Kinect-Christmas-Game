@@ -311,7 +311,10 @@ public class GameManager : MonoBehaviour
         {
             foreach (Transform child in p.transform)
             {
-                child.GetComponent<Collectible>().DestroyCollectible();
+                if (child.GetComponent<Collectible>() != null)
+                {
+                    child.GetComponent<Collectible>().DestroyCollectible();
+                }
             }
         }
     }

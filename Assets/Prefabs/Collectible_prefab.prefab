@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5185073702433860802}
   - component: {fileID: 5185073702430031280}
   - component: {fileID: 5185073703575232917}
+  - component: {fileID: 8348565175281003463}
   m_Layer: 0
   m_Name: Collectible_prefab
   m_TagString: Untagged
@@ -92,7 +93,7 @@ MeshCollider:
   m_GameObject: {fileID: 5185073702436326452}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
@@ -112,3 +113,17 @@ MonoBehaviour:
   rotateSpeed: 0
   value: 1
   collectibleType: 0
+  scoreSpritePrefab: {fileID: 2880820039548062709, guid: 70931e51a80d9944993058260ef90823, type: 3}
+--- !u!65 &8348565175281003463
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5185073702436326452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.59750164, y: 0.45576957, z: 0.5975017}
+  m_Center: {x: 0.000000014901161, y: 0.22868972, z: 0.00000008940697}
