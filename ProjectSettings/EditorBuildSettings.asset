@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ScenarioConLogica.unity
+    guid: 456e0854447ebf1409ee6480e30f673c
   m_configObjects: {}

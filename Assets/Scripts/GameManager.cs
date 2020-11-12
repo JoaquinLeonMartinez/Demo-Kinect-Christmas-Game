@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using JetBrains.Annotations;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
@@ -6,15 +7,16 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
 
-    public int score; //regalos que ha recogido el jugador
-    public int maxPresentsScore; //numero totoal de regalos que se generan en la escena
-    public int maxPresents;
-    public int targetScore;
-    public bool prices;
+    public int score; // OUT (En caso de querer guardar estadisticas)
+    public int maxPresentsScore; //IN
+    public int maxPresents; // IN
+    public int targetScore; // IN
+    public int prices; // IN
+    public bool wonPrice; //out
     public int smallPresents;
     public int mediumPresents;
     public int bigPresents;
-    public int maxEnergyInScenario;
+    public int maxEnergyInScenario; //IN
 
     public static GameManager Instance;
 
@@ -24,7 +26,7 @@ public class GameManager : MonoBehaviour
     int currentEnergy;
     int maxEnergy;
     float timeElapsed; //Es el tiempo que ha pasado
-    float energyUnitValue;
+    public float energyUnitValue;
 
     [SerializeField] List<GameObject> collectiblePoints;
     [SerializeField] GameObject collectable;
@@ -36,12 +38,9 @@ public class GameManager : MonoBehaviour
 
         if (Instance == null)
         {
-
             Instance = this;
             DontDestroyOnLoad(this.gameObject);
-
-            //Rest of your Awake code
-
+            //De poner mas codigo deberia ser aqui
         }
         else
         {
@@ -89,11 +88,21 @@ public class GameManager : MonoBehaviour
 
     void CheckScore()//comprobamos si ha conseguido el premio
     {
-        if(score >= targetScore)
+        //si entra aqui es que el juego ha acabado
+
+        if (score >= targetScore)
         {
-            Debug.Log("Enhorabuena, te llevas un fantastico masajeador de pies!!");
             //TODO: Aqui habra que comprobar si quedan premios o no y actuar en consecuencia
+            if (prices > 0) //si quedan regalos
+            {
+                Debug.Log("Enhorabuena, te llevas un fantastico masajeador de pies!!");
+                prices--;
+                wonPrice = true;
+            }
         }
+
+        SaveSystem.SaveDataScore();
+        SaveSystem.UpdateGameData();
     }
 
     public void UpdateScore(int _score)
@@ -139,21 +148,16 @@ public class GameManager : MonoBehaviour
         maxEnergy = 20;
         currentEnergy = maxEnergy;
         timeElapsed = 0;
-        energyUnitValue = 2;
         //END ENERGY BAR
 
-
         //GAMEPLAY
-        prices = true; //si quedan premios o no en el centro comercial (add que cada hora se actualice)
-        maxEnergyInScenario = 5; //aros de energía que encontraremos
-        maxPresents = 15; //numero de regalos en la escena
-        maxPresentsScore = 30; //numero maximo de puntos que podremos sumar (deben de ser mayor que el maxPresents)
-        score = 0; //puntuacion actual
-        targetScore = 20; //puntuacion objetivo
-        //La propia funcion de generar calcula cuantos habra de cada tipo (distribuye los puntos en el numero de regalos)
+        LoadData(); //se cargan desde el json los parametros del juego
+        //Reboot values
+        score = 0; 
         smallPresents = 0;
         mediumPresents = 0;
         bigPresents = 0;
+        wonPrice = false;
 
         if (CheckGameRules()) //comprobamos que los valores sean coherentes
         {
@@ -181,7 +185,7 @@ public class GameManager : MonoBehaviour
     public void DivideRatesFunction(int pointsToDistribute, int numOfPresents)
     {
 
-        if (!prices) //si no quedan premios el limite sera menor que el target
+        if (prices <= 0) //si no quedan premios el limite sera menor que el target
         {
             pointsToDistribute = targetScore - 1;
         }
@@ -317,6 +321,26 @@ public class GameManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void SaveData()
+    {
+        SaveSystem.UpdateGameData();
+    }
+
+    public void LoadData()
+    {
+        //TODO: Si esto devuelve null deberiamos setear unos valores por defecto
+        GameData data = SaveSystem.LoadData();
+
+        prices = data.prices;
+        maxPresentsScore = data.maxPresentsScore;
+        maxPresents = data.maxPresents;
+        targetScore = data.targetScore;
+        maxEnergyInScenario = data.maxEnergyInScenario;
+        energyUnitValue = data.energyUnitValue;
+
+        Debug.Log($"Se han cargado los siguientes datos: score: {score}, maxPresentsScore = {maxPresentsScore}, maxPresents = {maxPresents}, targetScore = {targetScore}, maxEnergyInScenario = {maxEnergyInScenario}");
     }
 
 }
