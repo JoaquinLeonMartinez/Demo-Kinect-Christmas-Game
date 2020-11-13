@@ -16,9 +16,10 @@ public class SpawnGenerator : MonoBehaviour
 
     public void GenerateSpawners()
     {
-        for (int i=0; i < 500; i++)
+
+        while (distanceTravelled < pathCreator.path.length)
         {
-            distanceTravelled += 5f;
+            distanceTravelled += (float)(pathCreator.path.length * 0.05);
             transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
             //transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction); 
             var spawner = Instantiate(spawnerPrefab, transform);
@@ -29,15 +30,14 @@ public class SpawnGenerator : MonoBehaviour
             var spawner2 = Instantiate(spawnerPrefab, transform);
             spawner2.transform.parent = spawnerParent.transform; //tdos los spawners son hijos del mismo objeto
 
-            transform.SetPositionAndRotation(new Vector3(transform.position.x - 2*distanceBetweenCollectables, transform.position.y, transform.position.z), transform.rotation);
+            //Izquierda:
+            transform.SetPositionAndRotation(new Vector3(transform.position.x - 2 * distanceBetweenCollectables, transform.position.y, transform.position.z), transform.rotation);
             var spawner3 = Instantiate(spawnerPrefab, transform);
             spawner3.transform.parent = spawnerParent.transform; //tdos los spawners son hijos del mismo objeto
 
-            //Izquierda:
-
-
-            Debug.Log("Generamos un spawner en la posicion ");
+             Debug.Log("Generamos un spawner en la posicion ");
         }
+
     }
 
 
