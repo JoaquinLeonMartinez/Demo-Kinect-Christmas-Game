@@ -27,7 +27,15 @@ public static class SaveSystem
 
     public static void UpdateGameData()
     {
-        string path = Application.dataPath + "/jsonFiles/Data.json";
+        string path = Application.dataPath + "/jsonFiles";
+
+        if (!File.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        path = path + "/Data.json";
+
         GameData data = new GameData();
         string gameDataJson = JsonUtility.ToJson(data);
         //File.WriteAllText(path, gameDataJson);
@@ -41,7 +49,15 @@ public static class SaveSystem
 
     public static void SaveDataScore()
     {
-        string path = Application.dataPath + "/jsonFiles/Score.json";
+        string path = Application.dataPath + "/jsonFiles";
+
+        if (!File.Exists(path))
+        {
+            Directory.CreateDirectory(path);
+        }
+
+        path = path + "/Score.json";
+
         ScoreData data = new ScoreData();
         string gameDataJson = JsonUtility.ToJson(data);
         using (System.IO.StreamWriter file =
@@ -53,24 +69,28 @@ public static class SaveSystem
 
     public static GameData LoadData()
     {
-        string path = Application.dataPath + "/jsonFiles/Data.json";
+        string path = Application.dataPath + "/jsonFiles";
 
-        if (File.Exists(path))
+        if (!File.Exists(path))
         {
+            //Directory.CreateDirectory(path);
+            //UpdateGameData(); //Metemos informacion en el fichero aunque sea la que hay por defecto (asegurarnos de que hay informacion)
+            path = path + "/Data.json";
             //BinaryFormatter formatter = new BinaryFormatter();
             string fileDataJson = File.ReadAllText(path);
             //FileStream stream = new FileStream(path, FileMode.Open);
             GameData data = JsonUtility.FromJson<GameData>(fileDataJson);
             //GameData data = formatter.Deserialize(stream) as GameData;
             //stream.Close();
-
             return data;
         }
         else
         {
-            Debug.LogError("No se ha encontrado el fichero: " + path);
+            Debug.LogError("No existe el fichero en la ruta: " + path);
             return null;
         }
+
+
     }
 
 }

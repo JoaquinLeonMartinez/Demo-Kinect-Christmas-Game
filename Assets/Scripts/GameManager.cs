@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject collectable;
 
     [SerializeField] GameObject collectiblePrefab;
+    [SerializeField] List<GameObject> collectiblePrefabs;
+
+    [SerializeField] SpawnGenerator spawnGenerator;
 
     void Awake()
     {
@@ -50,8 +53,9 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        spawnGenerator.GenerateSpawners(); //generamos los puntos de spawn
         collectiblePoints = new List<GameObject>();
-        SetupPresentsPoints();
+        SetupPresentsPoints(); // los guardamos en una lista
         SetUpGame();
     }
 
@@ -162,6 +166,7 @@ public class GameManager : MonoBehaviour
         if (CheckGameRules()) //comprobamos que los valores sean coherentes
         {
             //Debug.Log("Los parametros son correctos, vamos a generar los collectible");
+            ResetCollectables();
             GenerateGameCollectables();
         }
         else
@@ -229,13 +234,14 @@ public class GameManager : MonoBehaviour
         List<GameObject> auxList = new List<GameObject>();
 
         //Ahora vamos con los aros de energia:
-
+        //TODO: de momento vamos a comentar los aros:
+        /*
         while (eneryToGenerate > 0)
         {
             int randomPos = Random.Range(0, collectiblePoints.Count);
                 //instanciate
-            var newObject = Instantiate(collectiblePrefab, collectiblePoints[randomPos].transform);
-            newObject.GetComponent<Collectible>().Setup(1, CollectibleType.Energy);
+            var newObject = Instantiate(collectiblePrefabs[3], collectiblePoints[randomPos].transform);
+            //newObject.GetComponent<Collectible>().Setup(1, CollectibleType.Energy); // no es necesario, ya le estamos indicando que es el prefab 4, que es el anillo 
 
             auxList.Add(collectiblePoints[randomPos]); //add to aux list
             collectiblePoints.Remove(collectiblePoints[randomPos]); //lo eliminamos de la lista para la siguiente iteracion
@@ -244,6 +250,8 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Se han generado correctamente los aros de energia");
+        */
+
 
         //Ahora vamos con los regalos:
 
@@ -267,8 +275,8 @@ public class GameManager : MonoBehaviour
                 smallPresents--;//esto realmente no es necesario
             }
 
-            var newObject = Instantiate(collectiblePrefab, collectiblePoints[randomPos].transform);
-            newObject.GetComponent<Collectible>().Setup(newValue, CollectibleType.Points);
+            var newObject = Instantiate(collectiblePrefabs[newValue-1], collectiblePoints[randomPos].transform);
+            //newObject.GetComponent<Collectible>().Setup(newValue, CollectibleType.Points); //en el propio prefab se indica esta info
 
             auxList.Add(collectiblePoints[randomPos]); //add to aux list
             collectiblePoints.Remove(collectiblePoints[randomPos]); //lo eliminamos de la lista para la siguiente iteracion
@@ -342,6 +350,5 @@ public class GameManager : MonoBehaviour
 
         Debug.Log($"Se han cargado los siguientes datos: score: {score}, maxPresentsScore = {maxPresentsScore}, maxPresents = {maxPresents}, targetScore = {targetScore}, maxEnergyInScenario = {maxEnergyInScenario}");
     }
-
 }
 

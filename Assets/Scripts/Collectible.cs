@@ -41,13 +41,12 @@ public class Collectible : MonoBehaviour
         }
         else
         {
-            
             GameObject childObject = Instantiate(scoreSpritePrefab, this.transform) as GameObject;
             childObject.transform.parent = this.transform.parent;
 
             GameManager.Instance.UpdateScore(value);
         }
-        
+
         Debug.Log("Has recogido un objeto :D");
         DestroyCollectible();
     }

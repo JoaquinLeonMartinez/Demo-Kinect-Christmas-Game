@@ -13,17 +13,25 @@ public class Follower : MonoBehaviour
     {
         
     }
-
-    
     void Update()
     {
         distanceTravelled += speed * Time.deltaTime;
         transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
-        transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
+        //transform.rotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
     }
 
     public void ResetFollower()
     {
         distanceTravelled = 0;
+    }
+
+    public Quaternion getActualPathRotation()
+    {
+        return pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
+    }
+
+    public Vector3 getCurrentPathCenter()
+    {
+        return pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
     }
 }

@@ -24,9 +24,13 @@ public class Controll : MonoBehaviour
     public float jumpForce;
 
     //Velocidad a la que se realizará el movimiento de transición
-    public float velocity;
+    public float rotateSpeed;
+
+    public float frontSpeed; //esta se combina con la del follower
 
     Vector3 originalPos;
+
+    [SerializeField] Follower follower;
 
     //Movimiento Update
     [SerializeField]
@@ -70,6 +74,36 @@ public class Controll : MonoBehaviour
             //animator.Play("05_A_Santa_jump_Sack");
         }
 
+        if (goRight == true)
+        {
+            player.transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotateSpeed);
+
+        }
+        if (goLeft == true)
+        {
+            //comprobar que no gire mas de 90 grados con respecto a la direccion de la carretera
+            player.transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotateSpeed);
+        }
+
+        
+
+        //Debug.Log("La rotacion actual del camino es: " + follower.getActualPathRotation());
+        //Debug.Log("La rotacion actual del jugador es: " + player.transform.rotation);
+        //siempre se mueve hacia delante: (habra que comprobar que no se salga del espacio que tenemos que delimitar
+        Debug.Log("La posicion x del jugador es: " + player.transform.localPosition.x);
+        //Debug.Log("La posicion x del path es: " + follower.getCurrentPathCenter().x);
+        //player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
+        //Debug.Log("La distancia entre ellos es " + (Mathf.Abs(player.transform.position.x - follower.getCurrentPathCenter().x)));
+        //if (Mathf.Abs(player.transform.position.x - follower.getCurrentPathCenter().x) < 30)
+        /*if (player.transform.localPosition.x < 3 || player.transform.localPosition.x > -3)
+        {
+            Debug.Log("Se esta moviendo");
+            //player.transform.position += new Vector3(player.transform.forward.x, 0, 0) * Time.deltaTime * frontSpeed;
+            //player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
+        }
+        */
+        player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
+        /*
         //Ecuaciones para el movimiento
         if (goRight == true)
         {
@@ -87,6 +121,7 @@ public class Controll : MonoBehaviour
                 player.transform.localPosition = position + new Vector3(0, -3, 0) * Time.deltaTime * velocity;
             }
         }
+        */
     }
 
     //Función a la que se llama para ir a la derecha
