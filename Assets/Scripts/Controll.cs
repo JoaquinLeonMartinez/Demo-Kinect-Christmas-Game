@@ -73,7 +73,7 @@ public class Controll : MonoBehaviour
         //Salto
         if (Input.GetKeyDown(KeyCode.W))
         {
-            //rb.AddForce(Vector3.up * jumpForce); //TODO: qUITAR SI FINALMENTE NO HAY SALTO
+            //rb.AddForce(Vector3.up * jumpForce); //TODO: QUITAR SI FINALMENTE NO HAY SALTO
             //animator.Play("05_A_Santa_jump_Sack");
         }
 

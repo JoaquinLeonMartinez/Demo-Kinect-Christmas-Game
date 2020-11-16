@@ -38,7 +38,7 @@ public class BodyReader : MonoBehaviour
 
     //Rango que definirá cuando el jugador se ha inclinado a cualquiera de los dos lados
     //public float RightThreshold;
-    public float Threshold = 0.1f;
+    public float Threshold = 0.5f;
     //public float LeftThreshold = 0.1f;
 
     //Tiempo que se le deja al jugador para colocarse bien
@@ -92,6 +92,7 @@ public class BodyReader : MonoBehaviour
             ShoulderLeftPos = Vector3.zero;
             lastWasNull = true;
         }
+
         /*
         if (ShoulderRight != null)
         {
@@ -116,10 +117,10 @@ public class BodyReader : MonoBehaviour
             isGrounded = true;
         }
         */
-
+        /*
         //Ahora se realizará lo mismo para realizar los movimientos de izquierda y derecha
         //Derecha
-        if (StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) > Threshold) && (InitialYPositionLeft != 0) && contador == 0) //no deberia ser un valor absoluto¿? -- no
+        if (StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) > Threshold) && (InitialYPositionLeft != 0) && contador == 0) 
         {
             onRight.Invoke();
             StandRight = false;
@@ -140,42 +141,34 @@ public class BodyReader : MonoBehaviour
         }
         else if (!StandLeft && ((ShoulderLeftPos.y - InitialYPositionLeft) > Threshold))
         {
-            stopLeft.Invoke();
+            stopRight.Invoke();
             StandLeft = true;
             contador = 0;
+        }
+        */
+        
+        if (ShoulderLeftPos.y > (InitialYPositionLeft + Threshold))
+        {
+            stopLeft.Invoke();
+            //giramos a la derecha en este caso
+            Debug.Log($"Deberia girar a la derecha: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            onRight.Invoke();
+        }
+        else if (ShoulderLeftPos.y < (InitialYPositionLeft - Threshold))
+        {
+            stopRight.Invoke();
+            //giramos a la izq
+            Debug.Log($"Deberia girar a la izquierda: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            onLeft.Invoke();
+        }
+        else
+        {
+            stopLeft.Invoke();
+            stopRight.Invoke();
         }
     }
 
     /*
-     New Version:
-            //Derecha
-        if (StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) > RightThreshold) && (InitialYPositionLeft != 0) && contador == 0)
-        {
-            onRight.Invoke();
-            StandRight = false;
-            contador = 1;
-        }
-        else if (!StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) < RightThreshold))
-        {
-            stopRight.Invoke();
-            StandRight = true;
-            contador = 0;
-        }
-        //Izquierda
-        if (StandLeft && ((ShoulderLeftPos.y - InitialYPositionLeft) < LeftThreshold) && (InitialYPositionLeft != 0) && contador == 0)
-        {
-            onLeft.Invoke();
-            StandLeft = false;
-            contador = 1;
-        }
-        else if (!StandLeft && ((ShoulderLeftPos.y - InitialYPositionLeft) > LeftThreshold))
-        {
-            stopLeft.Invoke();
-            StandLeft = true;
-            contador = 0;
-        }
-
-
      Old version:
             //Derecha
         if (StandRight && ((ShoulderLeftPos.x - InitialXPosition) > RightThreshold) && (InitialXPosition != 0) && contador == 0)
@@ -204,16 +197,6 @@ public class BodyReader : MonoBehaviour
             contador = 0;
         }
      */
-
-    void CheckDirection(Vector3 shoulderRightPos, Vector3 shoulderLeftPos, float threshold)
-    {
-        //Tendremos que detectar ambos hombros. Si uno esta mas bajo (eje Y) que otro se va en la direccion del mas bajo (aplicar un threshold)
-        if (Mathf.Abs(shoulderRightPos.y - shoulderLeftPos.y) > threshold)
-        {
-            //esto significa que el Left esta mas alto, por lo tanto vamos a la derecha
-        }
-
-    }
 
     //Aquí se guardarán las coordenadas de referencia iniciales
     private void RecordInitialPosition()

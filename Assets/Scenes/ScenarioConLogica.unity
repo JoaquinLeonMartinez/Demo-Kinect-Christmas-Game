@@ -954,7 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea299b6e7fd9e0b47859ab1e9300c7c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pathCreatorsParent: {fileID: 871067091}
+  pathCreator: {fileID: 619094617}
   endOfPathInstruction: 0
   spawnerParent: {fileID: 334848573}
   spawnerPrefab: {fileID: 4055538914070769340, guid: 8fdfac78f50cd3a4194b379d51e4030c, type: 3}
@@ -3422,7 +3422,7 @@ MonoBehaviour:
   model: {fileID: 180460949}
   jumpForce: 300
   rotateSpeed: 35
-  frontSpeed: 8
+  frontSpeed: 7
   follower: {fileID: 721008891}
   santa: {fileID: 1690901173}
   goRight: 0

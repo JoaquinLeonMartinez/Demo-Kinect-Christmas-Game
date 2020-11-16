@@ -128,15 +128,11 @@ public class GameManager : MonoBehaviour
 
     public void UpdateScore(int _score)
     {
-        this.score += _score;
-
-        if (score < 0) //en caso de haber algo que reste puntos
+        if (this.GetComponent<PauseGame>().state == MenuState.gameScreen)
         {
-            score = 0;
+            this.score += _score;
+            UIManager.UpdateScore(score, maxPresentsScore);
         }
-
-        UIManager.UpdateScore(score, maxPresentsScore);
-        //Debug.Log($"Se acaba de actualizar la puntuación a {score}");
     }
 
     public void UpdateEnergy(int _energy)
@@ -177,7 +173,10 @@ public class GameManager : MonoBehaviour
         spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
         SetupPresentsPoints(); // Los guardamos en una lista
 
+
         //Reboot values
+        currentEnergy = maxEnergy;
+        timeElapsed = 0;
         score = 0; 
         smallPresents = 0;
         mediumPresents = 0;
@@ -350,19 +349,7 @@ public class GameManager : MonoBehaviour
     void ResetCollectables()
     {
         collectiblePoints.Clear();
-        /*
-        foreach (var p in collectiblePoints)
-        {
-            foreach (Transform child in p.transform)
-            { 
-                if (child.GetComponent<Collectible>() != null)
-                {
-                    child.GetComponent<Collectible>().DestroyCollectible();
-                }
-                
-            }
-        }
-        */
+
         Debug.Log($"Se han borrado, Spawners: {collectiblePoints.Count}");
     }
 
