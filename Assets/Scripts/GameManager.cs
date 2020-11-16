@@ -62,17 +62,27 @@ public class GameManager : MonoBehaviour
         collectiblePoints = new List<GameObject>();
         SetupPresentsPoints(); // los guardamos en una lista
         */
-        spawnGenerator.SetupGenerator();
         collectiblePoints = new List<GameObject>();
-        SetUpGame();
+        //ENERGY BAR 
+        maxEnergy = 20;
+        currentEnergy = maxEnergy;
+        timeElapsed = 0;
+        //END ENERGY BAR
+
+        //GAMEPLAY
+        LoadData(); //se cargan desde el json los parametros del juego
+
+
+        //UI
+        energyBar.setMaxEnergy(maxEnergy);
+        UpdateScore(score);
+        //END UI
     }
 
     private void Update()
     {
 
-        DebugFuntion(); //borrar antes de subir
-
-        timeElapsed += Time.deltaTime; //con esto sabremos cuanto tiempo ha pasado
+        
 
         if (timeElapsed >= energyUnitValue)
         {
@@ -81,13 +91,12 @@ public class GameManager : MonoBehaviour
             energyBar.setEnergy(currentEnergy);
             CheckEnergy();
         }
+        else
+        {
+            timeElapsed += Time.deltaTime; //con esto sabremos cuanto tiempo ha pasado
+        }
     }
 
-    void DebugFuntion()
-    {
-        //Debug.Log($"Numero total de regalos: {maxPresents}");
-        //Debug.Log($"Numero total de regalos: {maxPresents}");
-    }
 
     void CheckEnergy()//a este metodo habra que llamarlo cada vez que decrementamos la energía
     {
@@ -168,14 +177,6 @@ public class GameManager : MonoBehaviour
         spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
         SetupPresentsPoints(); // Los guardamos en una lista
 
-        //ENERGY BAR 
-        maxEnergy = 20;
-        currentEnergy = maxEnergy;
-        timeElapsed = 0;
-        //END ENERGY BAR
-
-        //GAMEPLAY
-        LoadData(); //se cargan desde el json los parametros del juego
         //Reboot values
         score = 0; 
         smallPresents = 0;

@@ -3421,7 +3421,7 @@ MonoBehaviour:
   player: {fileID: 1690901173}
   model: {fileID: 180460949}
   jumpForce: 300
-  rotateSpeed: 50
+  rotateSpeed: 35
   frontSpeed: 8
   follower: {fileID: 721008891}
   santa: {fileID: 1690901173}

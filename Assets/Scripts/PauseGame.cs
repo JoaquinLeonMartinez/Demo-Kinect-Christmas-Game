@@ -24,7 +24,7 @@ public class PauseGame : MonoBehaviour
     private void Update()
     {
         //|| GameManager.Instance.UserDetected()
-        if ((Input.GetKeyDown(KeyCode.P) || GameManager.Instance.UserDetected()) && !gameActive) //cambiar esto por detectar al usuario
+        if ((Input.GetKeyDown(KeyCode.P) || GameManager.Instance.UserDetected()) && state == MenuState.pauseScreen) //cambiar esto por detectar al usuario
         {
             Debug.Log("Ha detectado al usuario, empieza el juego");
             //Esto debe ser salir del menu de pausa
@@ -32,7 +32,7 @@ public class PauseGame : MonoBehaviour
         }
 
         //Si lleva mas de 5 segundos sin detectar a nadie y el juego esta corriendo se activa este menu
-        if (gameActive && GameManager.Instance.GetTimeWaiting() > maxTimeWaiting && false) //de momento no queremos que entre aqui
+        if (MenuState.gameScreen == state && GameManager.Instance.GetTimeWaiting() > maxTimeWaiting && false) //de momento no queremos que entre aqui
         {
             Debug.Log("Lleva mucho tiempo sin encontrar a nadie");
             //esto debe ser entrar al menu de pausa

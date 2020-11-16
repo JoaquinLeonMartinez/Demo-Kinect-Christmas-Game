@@ -5,8 +5,8 @@ using PathCreation;
 
 public class SpawnGenerator : MonoBehaviour
 {
-    public GameObject pathCreatorsParent;
-    List<PathCreator> pathCreators;
+
+    public PathCreator pathCreator;
     public EndOfPathInstruction endOfPathInstruction;
     float distanceTravelled;
 
@@ -22,8 +22,6 @@ public class SpawnGenerator : MonoBehaviour
 
     public void GenerateSpawners(int numOfSpawners)
     {
-        //SetupGenerator();
-        PathCreator pathCreator = pathCreators[Random.Range(0, pathCreators.Count)];
         distanceTravelled = 0;
         float spawnerFrecuency = pathCreator.path.length / (float)numOfSpawners;
         Debug.Log($"path legth:  { pathCreator.path.length }");
@@ -48,15 +46,6 @@ public class SpawnGenerator : MonoBehaviour
             var spawner = Instantiate(spawnerPrefab, transform);
             spawner.transform.parent = spawnerParent.transform; //todos los spawners son hijos del mismo objeto
             currentSize--;
-        }
-    }
-
-    public void SetupGenerator()
-    {
-        pathCreators = new List<PathCreator>();
-        foreach (Transform child in pathCreatorsParent.transform)
-        {
-            pathCreators.Add(child.gameObject.GetComponent<PathCreator>());
         }
     }
 
