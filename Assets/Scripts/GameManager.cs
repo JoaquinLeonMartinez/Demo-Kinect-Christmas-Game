@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public int mediumPresents;
     public int bigPresents;
     public int maxEnergyInScenario; //IN
+    public int numOfSpawners; //parametrizar esto
 
     public static GameManager Instance;
 
@@ -53,9 +54,13 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        spawnGenerator.GenerateSpawners(); //generamos los puntos de spawn
+        /*
+        spawnGenerator.GenerateSpawners(numOfSpawners); //generamos los puntos de spawn
         collectiblePoints = new List<GameObject>();
         SetupPresentsPoints(); // los guardamos en una lista
+        */
+        spawnGenerator.SetupGenerator();
+        collectiblePoints = new List<GameObject>();
         SetUpGame();
     }
 
@@ -124,10 +129,16 @@ public class GameManager : MonoBehaviour
 
     public void UpdateEnergy(int _energy)
     {
-        this.currentEnergy += _energy;
+        if (_energy > maxEnergy)
+        {
+            this.currentEnergy = maxEnergy;
+        }
+        else
+        {
+            this.currentEnergy += _energy;
+        }
         energyBar.setEnergy(currentEnergy);
     }
-
 
     void SetupPresentsPoints()
     {
@@ -140,14 +151,19 @@ public class GameManager : MonoBehaviour
 
     public void ResetGame()
     {
-        playerController.GetComponent<Follower>().ResetFollower();
         playerController.GetComponent<Controll>().ResetControll();
-        ResetCollectables();
+        //ResetCollectables();
         SetUpGame();
     }
 
     public void SetUpGame()
     {
+        ResetCollectables(); //Borramos los regalos de los spawners
+        spawnGenerator.DestroySpawners(); //Destruimos los spawners
+        Debug.Log($"Vamos a generar los spawners, en total generaremos {numOfSpawners}");
+        spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
+        SetupPresentsPoints(); // Los guardamos en una lista
+
         //ENERGY BAR 
         maxEnergy = 20;
         currentEnergy = maxEnergy;
@@ -166,7 +182,6 @@ public class GameManager : MonoBehaviour
         if (CheckGameRules()) //comprobamos que los valores sean coherentes
         {
             //Debug.Log("Los parametros son correctos, vamos a generar los collectible");
-            ResetCollectables();
             GenerateGameCollectables();
         }
         else
@@ -299,7 +314,7 @@ public class GameManager : MonoBehaviour
     public bool CheckGameRules() //validaciones
     {
         bool correct = true;
-
+        Debug.Log($"Numero de spawners: {collectiblePoints.Count}");
         if (!(maxEnergyInScenario + maxPresents <= collectiblePoints.Count))
         {
             Debug.Log($"No cuadra la energia con el nuemro de slots disponible en el escenario, energia = {maxEnergyInScenario} , maxPresents = {maxPresents} , slots = {collectiblePoints.Count}");
@@ -322,13 +337,16 @@ public class GameManager : MonoBehaviour
         foreach (var p in collectiblePoints)
         {
             foreach (Transform child in p.transform)
-            {
+            { 
                 if (child.GetComponent<Collectible>() != null)
                 {
                     child.GetComponent<Collectible>().DestroyCollectible();
                 }
+                
             }
         }
+        collectiblePoints.Clear();
+        Debug.Log($"Se han borrado, Spawners: {collectiblePoints.Count}");
     }
 
     public void SaveData()

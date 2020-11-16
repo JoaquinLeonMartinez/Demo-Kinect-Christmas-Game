@@ -10,7 +10,14 @@ public class EnergyBar : MonoBehaviour
 
     public void setEnergy(int energy) //actualiza la barra
     {
-        slider.value = energy;
+        if (energy > slider.maxValue)
+        {
+            slider.value = slider.maxValue;
+        }
+        else
+        {
+            slider.value = energy;
+        } 
     }
 
     public void setMaxEnergy(int energy) //se llama al inicio para establecer el limite de energia

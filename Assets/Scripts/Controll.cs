@@ -29,8 +29,10 @@ public class Controll : MonoBehaviour
     public float frontSpeed; //esta se combina con la del follower
 
     Vector3 originalPos;
+    Quaternion originalRotation;
 
     [SerializeField] Follower follower;
+    [SerializeField] GameObject santa;
 
     //Movimiento Update
     [SerializeField]
@@ -42,6 +44,7 @@ public class Controll : MonoBehaviour
     {
         //rb = player.GetComponent<Rigidbody>(); //No se usara de momento ya que no se puede saltar
         originalPos = player.transform.localPosition;
+        originalRotation = santa.transform.rotation;
     }
 
     void Update()
@@ -90,7 +93,7 @@ public class Controll : MonoBehaviour
         //Debug.Log("La rotacion actual del camino es: " + follower.getActualPathRotation());
         //Debug.Log("La rotacion actual del jugador es: " + player.transform.rotation);
         //siempre se mueve hacia delante: (habra que comprobar que no se salga del espacio que tenemos que delimitar
-        Debug.Log("La posicion x del jugador es: " + player.transform.localPosition.x);
+        //Debug.Log("La posicion x del jugador es: " + player.transform.localPosition.x);
         //Debug.Log("La posicion x del path es: " + follower.getCurrentPathCenter().x);
         //player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
         //Debug.Log("La distancia entre ellos es " + (Mathf.Abs(player.transform.position.x - follower.getCurrentPathCenter().x)));
@@ -153,6 +156,10 @@ public class Controll : MonoBehaviour
     public void ResetControll()
     {
         player.transform.localPosition = originalPos;
+        santa.transform.rotation = originalRotation;
+        follower.ResetFollower();
+
+
     }
 }
 

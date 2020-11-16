@@ -18,6 +18,7 @@ public class UI_Manager : MonoBehaviour
 
     public void UpdateScore(int currentScore, int maxScore)
     {
-        scoreText.text = $"Score: {currentScore} / {maxScore}";
+        //scoreText.text = $"Score: {currentScore} / {maxScore}";
+        scoreText.text = $"{currentScore}";
     }
 }
