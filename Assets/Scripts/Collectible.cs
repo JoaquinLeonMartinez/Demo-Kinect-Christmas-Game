@@ -48,7 +48,17 @@ public class Collectible : MonoBehaviour
         }
 
         Debug.Log("Has recogido un objeto :D");
-        DestroyCollectible();
+
+        if (collectibleType == CollectibleType.Energy)
+        {
+            this.gameObject.SetActive(false);
+        }
+        else
+        {
+            DestroyCollectible();
+        }
+
+        
     }
 
     public void DestroyCollectible()

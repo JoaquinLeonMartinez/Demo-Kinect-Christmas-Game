@@ -34,8 +34,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] GameObject collectiblePrefab;
     [SerializeField] List<GameObject> collectiblePrefabs;
+    [SerializeField] GameObject ringsParent;
 
     [SerializeField] SpawnGenerator spawnGenerator;
+
+    [SerializeField] BodyReader bodyReader;
 
     void Awake()
     {
@@ -91,7 +94,7 @@ public class GameManager : MonoBehaviour
         if (currentEnergy <= 0)
         {
             CheckScore();
-            this.GetComponent<PauseGame>().SetPause();
+            this.GetComponent<PauseGame>().EndMenu();
         }
     }
 
@@ -158,6 +161,7 @@ public class GameManager : MonoBehaviour
 
     public void SetUpGame()
     {
+        ResetRings();
         ResetCollectables(); //Borramos los regalos de los spawners
         spawnGenerator.DestroySpawners(); //Destruimos los spawners
         Debug.Log($"Vamos a generar los spawners, en total generaremos {numOfSpawners}");
@@ -195,6 +199,16 @@ public class GameManager : MonoBehaviour
         energyBar.setMaxEnergy(maxEnergy);
         UpdateScore(score);
         //END UI
+    }
+
+    public float GetTimeWaiting()
+    {
+        return bodyReader.timeWaiting;
+    }
+
+    public bool UserDetected()
+    {
+        return bodyReader.userDetected;
     }
 
     public void GenerateGameCollectables()
@@ -334,6 +348,8 @@ public class GameManager : MonoBehaviour
 
     void ResetCollectables()
     {
+        collectiblePoints.Clear();
+        /*
         foreach (var p in collectiblePoints)
         {
             foreach (Transform child in p.transform)
@@ -345,8 +361,16 @@ public class GameManager : MonoBehaviour
                 
             }
         }
-        collectiblePoints.Clear();
+        */
         Debug.Log($"Se han borrado, Spawners: {collectiblePoints.Count}");
+    }
+
+    public void ResetRings()
+    {
+        foreach (Transform ring in ringsParent.transform)
+        {
+            ring.gameObject.SetActive(true);
+        }
     }
 
     public void SaveData()

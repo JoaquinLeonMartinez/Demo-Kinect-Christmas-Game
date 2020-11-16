@@ -44,6 +44,9 @@ public class BodyReader : MonoBehaviour
     //Tiempo que se le deja al jugador para colocarse bien
     public float RecordTime = 1.0f;
 
+    public float timeWaiting;
+    public bool userDetected;
+
     //Eventos que se mostrarán en el inspector para llamar a las distintas funciones
     //public UnityEvent onJump;
     public UnityEvent onRight;
@@ -62,11 +65,12 @@ public class BodyReader : MonoBehaviour
         {
             ShoulderLeft = GameObject.Find("ShoulderLeft"); //TODO: esto vamos a tener que cambiarlo (UNA OPCION ES PARAMETRIZAR ESTO, EL PROBLEMA ES QUE ELESQUELETO SE GENERA EN TIEMPO REAL)
         }
+        /*
         if (ShoulderRight == null)
         {
             ShoulderRight = GameObject.Find("ShoulderRight");
         }
-
+        */
         //En cuanto la kinect detecte el esqueleto, llamará a la función para identificar la posición inicial base
         if (lastWasNull && (ShoulderLeft != null)) //Con el lastWasNull limita que solo haya uno, que es el primero que pilla (esto en realidad no esta tan mal) ademas lo recalcula por cada verz que entra en pantalla uno nuevo
         {
@@ -76,15 +80,19 @@ public class BodyReader : MonoBehaviour
         //Aquí, una vez se detecta el esqueleto, se calcula la posición del hombro izquierdo y dereho (deteción salto)
         if (ShoulderLeft != null)
         {
+            userDetected = true;
+            timeWaiting = 0;
             ShoulderLeftPos = ShoulderLeft.transform.position;
             lastWasNull = false;
         }
         else
         {
+            userDetected = false;
+            timeWaiting += Time.deltaTime;
             ShoulderLeftPos = Vector3.zero;
             lastWasNull = true;
         }
-
+        /*
         if (ShoulderRight != null)
         {
             ShoulderRightPos = ShoulderRight.transform.position;
@@ -95,7 +103,7 @@ public class BodyReader : MonoBehaviour
             ShoulderRightPos = Vector3.zero;
             lastWasNull2 = true;
         }
-
+        */
         //Finalmente se comprueba que el jugador, estando en el suelo, ha saltado, evitando el caso concreto de la primera aparición del esqueleto
         /* De momento no se saltará por lo que esta parte del codigo queda comentada
         if (isGrounded && ((ShoulderLeftPos.y - InitialYPosition) > JumpThreshold) && (InitialYPosition != 0) && ((ShoulderRightPos.y - InitialYPosition2) > JumpThreshold) && (InitialYPosition != 0))

@@ -158,8 +158,6 @@ public class Controll : MonoBehaviour
         player.transform.localPosition = originalPos;
         santa.transform.rotation = originalRotation;
         follower.ResetFollower();
-
-
     }
 }
 
