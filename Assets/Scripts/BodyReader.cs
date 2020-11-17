@@ -62,6 +62,9 @@ public class BodyReader : MonoBehaviour
 
     public Vector3 HandLeftPos;
     public Vector3 HandRightPos;
+
+    [SerializeField] Controll controll;
+    public float rotationLimit;
     /*
      HandLeft
      HandRight
@@ -166,19 +169,29 @@ public class BodyReader : MonoBehaviour
             //float difference =  HandLeftPos.y > (HandRightPos.y + Threshold);
             stopLeft.Invoke();
             //giramos a la derecha en este caso
-            Debug.Log($"Deberia girar a la derecha: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
-            onRight.Invoke();
+            //onRight.Invoke();
+            float rotation = HandLeftPos.y - (HandRightPos.y + Threshold);
+            if (rotation > rotationLimit)
+            {
+                rotation = rotationLimit;
+            }
+            controll.MoveRight(rotation);
+
         }
         else if (userDetected && HandLeftPos.y < (HandRightPos.y - Threshold))
         {
             stopRight.Invoke();
             //giramos a la izq
-            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
-            onLeft.Invoke();
+            //onLeft.Invoke();
+            float rotation = (HandRightPos.y - Threshold) - HandLeftPos.y;
+            if (rotation > rotationLimit)
+            {
+                rotation = rotationLimit;
+            }
+            controll.MoveLeft(rotation);
         }
         else if(userDetected && HandLeftPos.y > (HandRightPos.y - Threshold) && HandLeftPos.y < (HandRightPos.y + Threshold))
         {
-            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
             stopLeft.Invoke();
             stopRight.Invoke();
         }
