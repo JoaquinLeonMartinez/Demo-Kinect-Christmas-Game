@@ -14,6 +14,18 @@ public class PricesManager : MonoBehaviour
     int currentPrices;
     DateTime lastPriceDate;
 
+    //Cargar desde fichero
+    int smallPrices; //hay 140 (entre 100 y 150 puntos)
+    int mediumPrices; //hay 50 (entre 150 y 200 puntos)
+    int bigPrices; //hay 30 (mas de 200 puntos)
+
+    int leftSmallPrices; //los disponibles de este dia + los que sobraran del dia anterior
+    int leftMediumPrices; //los disponibles de este dia + los que sobraran del dia anterior
+    int leftBigPrices; //los disponibles de este dia + los que sobraran del dia anterior
+
+    //TODO: necesito fechas para saber cuantos premios se repartiran cada dia
+    //TODO: puedo hacer un diccionario por date en el cual se especifique cuantos regalos habra cada dia
+    //Podemos gestionar todo esto aqui y llamarlo desde el game manager
 
     void Start()
     {

@@ -13,7 +13,7 @@ public class SpawnGenerator : MonoBehaviour
     public GameObject spawnerParent;
     public GameObject spawnerPrefab;
 
-    public int distanceBetweenCollectables;
+    public int distanceBetweenCollectables = 15;
 
     public int currentPath = 0; //indica si los regalos se generaran a la derecha centro o izquierda
     public int minSizeGroup = 3;
@@ -22,6 +22,7 @@ public class SpawnGenerator : MonoBehaviour
 
     public void GenerateSpawners(int numOfSpawners)
     {
+        distanceBetweenCollectables = 5;
         distanceTravelled = 0;
         float spawnerFrecuency = pathCreator.path.length / (float)numOfSpawners;
         Debug.Log($"path legth:  { pathCreator.path.length }");
