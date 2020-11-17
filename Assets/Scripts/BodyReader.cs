@@ -7,11 +7,11 @@ using UnityEngine.Events;
 
 public class BodyReader : MonoBehaviour
 {
-    public GameObject ShoulderLeft;
-    public GameObject ShoulderRight;
+    //public GameObject ShoulderLeft;
+    //public GameObject ShoulderRight;
 
-    public Vector3 ShoulderLeftPos;
-    public Vector3 ShoulderRightPos;
+    //public Vector3 ShoulderLeftPos;
+    //public Vector3 ShoulderRightPos;
 
     //Variable que comprueba cuando la kinect comienza a detectar el cuerpo
     [SerializeField]
@@ -38,7 +38,7 @@ public class BodyReader : MonoBehaviour
 
     //Rango que definirá cuando el jugador se ha inclinado a cualquiera de los dos lados
     //public float RightThreshold;
-    public float Threshold = 0.5f;
+    public float Threshold = 5f;
     //public float LeftThreshold = 0.1f;
 
     //Tiempo que se le deja al jugador para colocarse bien
@@ -56,14 +56,26 @@ public class BodyReader : MonoBehaviour
 
     private int contador = 0;
 
+
+    public GameObject HandLeft;
+    public GameObject HandRight;
+
+    public Vector3 HandLeftPos;
+    public Vector3 HandRightPos;
+    /*
+     HandLeft
+     HandRight
+     */
     //public Windows.Kinect.Body body;
 
     private void Update()
     {
         //Buscar el hombro izquierdo como referencia
-        if (ShoulderLeft == null)
+        if (HandLeft == null && HandRight == null)
         {
-            ShoulderLeft = GameObject.Find("ShoulderLeft"); //TODO: esto vamos a tener que cambiarlo (UNA OPCION ES PARAMETRIZAR ESTO, EL PROBLEMA ES QUE ELESQUELETO SE GENERA EN TIEMPO REAL)
+            //ShoulderLeft = GameObject.Find("HandLeft"); //TODO: esto vamos a tener que cambiarlo (UNA OPCION ES PARAMETRIZAR ESTO, EL PROBLEMA ES QUE ELESQUELETO SE GENERA EN TIEMPO REAL)
+            HandLeft = GameObject.Find("HandLeft");
+            HandRight = GameObject.Find("HandRight");
         }
         /*
         if (ShoulderRight == null)
@@ -72,24 +84,26 @@ public class BodyReader : MonoBehaviour
         }
         */
         //En cuanto la kinect detecte el esqueleto, llamará a la función para identificar la posición inicial base
-        if (lastWasNull && (ShoulderLeft != null)) //Con el lastWasNull limita que solo haya uno, que es el primero que pilla (esto en realidad no esta tan mal) ademas lo recalcula por cada verz que entra en pantalla uno nuevo
+        if (lastWasNull && (HandLeft != null)) //Con el lastWasNull limita que solo haya uno, que es el primero que pilla (esto en realidad no esta tan mal) ademas lo recalcula por cada verz que entra en pantalla uno nuevo
         {
             Invoke("RecordInitialPosition", RecordTime); //en lugar de llamar directamente al metodo espera un segundo para que el jugador se colque correctamente
         }
 
         //Aquí, una vez se detecta el esqueleto, se calcula la posición del hombro izquierdo y dereho (deteción salto)
-        if (ShoulderLeft != null)
+        if (HandLeft != null)
         {
             userDetected = true;
             timeWaiting = 0;
-            ShoulderLeftPos = ShoulderLeft.transform.position;
+            HandLeftPos = HandLeft.transform.position;
+            HandRightPos = HandRight.transform.position;
             lastWasNull = false;
         }
         else
         {
             userDetected = false;
             timeWaiting += Time.deltaTime;
-            ShoulderLeftPos = Vector3.zero;
+            HandLeftPos = Vector3.zero;
+            HandRightPos = Vector3.zero;
             lastWasNull = true;
         }
 
@@ -147,27 +161,51 @@ public class BodyReader : MonoBehaviour
         }
         */
         
-        if (userDetected && ShoulderLeftPos.y > (InitialYPositionLeft + Threshold))
+        if (userDetected && HandLeftPos.y > (HandRightPos.y + Threshold))//HandLeftPos.y > (InitialYPositionLeft + Threshold
         {
             stopLeft.Invoke();
             //giramos a la derecha en este caso
-            Debug.Log($"Deberia girar a la derecha: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            Debug.Log($"Deberia girar a la derecha: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
             onRight.Invoke();
         }
-        else if (userDetected && ShoulderLeftPos.y < (InitialYPositionLeft - Threshold))
+        else if (userDetected && HandLeftPos.y < (HandRightPos.y - Threshold))
         {
             stopRight.Invoke();
             //giramos a la izq
-            Debug.Log($"Deberia girar a la izquierda: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
             onLeft.Invoke();
         }
-        else if(userDetected && ShoulderLeftPos.y > (InitialYPositionLeft - Threshold) && ShoulderLeftPos.y < (InitialYPositionLeft + Threshold))
+        else if(userDetected && HandLeftPos.y > (HandRightPos.y - Threshold) && HandLeftPos.y < (HandRightPos.y + Threshold))
         {
-            Debug.Log($"Deberia girar a la izquierda: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
             stopLeft.Invoke();
             stopRight.Invoke();
         }
     }
+
+    /*
+      if (userDetected && HandLeftPos.y > (InitialYPositionLeft + Threshold))
+        {
+            stopLeft.Invoke();
+            //giramos a la derecha en este caso
+            Debug.Log($"Deberia girar a la derecha: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            onRight.Invoke();
+        }
+        else if (userDetected && HandLeftPos.y < (InitialYPositionLeft - Threshold))
+        {
+            stopRight.Invoke();
+            //giramos a la izq
+            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            onLeft.Invoke();
+        }
+        else if(userDetected && HandLeftPos.y > (InitialYPositionLeft - Threshold) && HandLeftPos.y < (InitialYPositionLeft + Threshold))
+        {
+            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
+            stopLeft.Invoke();
+            stopRight.Invoke();
+        }
+    }
+     */
 
     /*
      Old version:
@@ -203,8 +241,8 @@ public class BodyReader : MonoBehaviour
     private void RecordInitialPosition()
     {
         //isGrounded = true; //al no haber salto esto nos da igual
-        InitialYPositionLeft = ShoulderLeftPos.y;
-        InitialYPositionRight = ShoulderRightPos.y;
-        InitialXPosition = ShoulderLeftPos.x;
+        InitialYPositionLeft = HandLeftPos.y;
+        InitialYPositionRight = HandRightPos.y;
+        InitialXPosition = HandLeftPos.x;
     }
 }
