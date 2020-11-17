@@ -123,7 +123,7 @@ public class GameManager : MonoBehaviour
         }
 
         SaveSystem.SaveDataScore();
-        SaveSystem.UpdateGameData();
+        //SaveSystem.UpdateGameData(); -> No es necesario, porque lo unico que utilizabamos de esto era prices, y ahora esto lo va a gestionar el PricesManager
     }
 
     public void UpdateScore(int _score)

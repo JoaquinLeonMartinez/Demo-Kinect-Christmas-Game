@@ -147,22 +147,23 @@ public class BodyReader : MonoBehaviour
         }
         */
         
-        if (ShoulderLeftPos.y > (InitialYPositionLeft + Threshold))
+        if (userDetected && ShoulderLeftPos.y > (InitialYPositionLeft + Threshold))
         {
             stopLeft.Invoke();
             //giramos a la derecha en este caso
             Debug.Log($"Deberia girar a la derecha: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
             onRight.Invoke();
         }
-        else if (ShoulderLeftPos.y < (InitialYPositionLeft - Threshold))
+        else if (userDetected && ShoulderLeftPos.y < (InitialYPositionLeft - Threshold))
         {
             stopRight.Invoke();
             //giramos a la izq
             Debug.Log($"Deberia girar a la izquierda: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
             onLeft.Invoke();
         }
-        else
+        else if(userDetected && ShoulderLeftPos.y > (InitialYPositionLeft - Threshold) && ShoulderLeftPos.y < (InitialYPositionLeft + Threshold))
         {
+            Debug.Log($"Deberia girar a la izquierda: CurrentY: {ShoulderLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
             stopLeft.Invoke();
             stopRight.Invoke();
         }
