@@ -39,9 +39,11 @@ public class Controll : MonoBehaviour
     bool goRight = false;
     [SerializeField]
     bool goLeft = false;
+    public float angleSpeed;
 
     void Start()
     {
+        angleSpeed = 0f;
         //rb = player.GetComponent<Rigidbody>(); //No se usara de momento ya que no se puede saltar
         originalPos = player.transform.localPosition;
         originalRotation = santa.transform.rotation;
@@ -79,12 +81,24 @@ public class Controll : MonoBehaviour
 
         if (goRight == true)
         {
+            /*
+            if (angleSpeed > 0)
+            {
+                //rotateSpeed *= angleSpeed;
+            }
+            */
             player.transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotateSpeed);
 
         }
         if (goLeft == true)
         {
             //comprobar que no gire mas de 90 grados con respecto a la direccion de la carretera
+            /*
+            if (angleSpeed > 0)
+            {
+                //rotateSpeed *= angleSpeed;
+            }
+            */
             player.transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotateSpeed);
         }
 
@@ -130,20 +144,24 @@ public class Controll : MonoBehaviour
     //Función a la que se llama para ir a la derecha
     public void MoveRight()
     {
+        //this.angleSpeed = angleSpeed;
         goRight = true;
     }
     public void StopRight()
     {
+        this.angleSpeed = 0f;
         goRight = false;
     }
 
     //Función a la que se llama para ir a la izquierda
     public void MoveLeft()
     {
+        //this.angleSpeed = angleSpeed;
         goLeft = true;
     }
     public void StopLeft()
     {
+        this.angleSpeed = 0f;
         goLeft = false;
     }
 

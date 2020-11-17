@@ -6,7 +6,22 @@ ModelImporter:
   - first:
       74: 1827226128182048838
     second: Take 001
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FbxTemp_0001
+    second: {fileID: 2800000, guid: 21cb953ef25849444a63f48d656a1fb4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FbxTemp_0002
+    second: {fileID: 2800000, guid: baf53214327105d4aa0f08cef8aa160c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: FbxTemp_0003
+    second: {fileID: 2800000, guid: 60aa6ac4c39b0de4cbbb6a12eed9782b, type: 3}
   materials:
     materialImportMode: 1
     materialName: 0

@@ -163,6 +163,7 @@ public class BodyReader : MonoBehaviour
         
         if (userDetected && HandLeftPos.y > (HandRightPos.y + Threshold))//HandLeftPos.y > (InitialYPositionLeft + Threshold
         {
+            //float difference =  HandLeftPos.y > (HandRightPos.y + Threshold);
             stopLeft.Invoke();
             //giramos a la derecha en este caso
             Debug.Log($"Deberia girar a la derecha: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
