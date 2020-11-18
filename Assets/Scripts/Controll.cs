@@ -30,6 +30,7 @@ public class Controll : MonoBehaviour
 
     Vector3 originalPos;
     Quaternion originalRotation;
+    Quaternion originalRotationMesh;
 
     [SerializeField] Follower follower;
     [SerializeField] GameObject santa;
@@ -51,98 +52,65 @@ public class Controll : MonoBehaviour
         //rb = player.GetComponent<Rigidbody>(); //No se usara de momento ya que no se puede saltar
         originalPos = player.transform.localPosition;
         originalRotation = santa.transform.rotation;
+        originalRotationMesh = playerMesh.transform.rotation;
     }
 
     void Update()
     {
-        //Controles de teclado que simulan las acciones de kinect
-        //Derecha
-        if (Input.GetKeyDown(KeyCode.D))
+        if (GameManager.Instance.playing)
         {
-            position = player.transform.localPosition;
-            goRight = true;
-        }
-        if (Input.GetKeyUp(KeyCode.D))
-        {
-            goRight = false;
-        }
-        //Izquierda
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            position = player.transform.localPosition;
-            goLeft = true;
-        }
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            goLeft = false;
-        }
-        //Salto
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            //rb.AddForce(Vector3.up * jumpForce); //TODO: QUITAR SI FINALMENTE NO HAY SALTO
-            //animator.Play("05_A_Santa_jump_Sack");
-        }
-
-        if (goRight == true)
-        {
-            Debug.Log($"Rotate speed = {rotateSpeed} - AngleSpeed = {angleSpeed}");
-            player.transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
-
-            if (playerMesh.transform.localEulerAngles.z > (360 - angleMaxZ) || playerMesh.transform.localEulerAngles.z < 180)
+            //Controles de teclado que simulan las acciones de kinect
+            //Derecha
+            if (Input.GetKeyDown(KeyCode.D))
             {
-                playerMesh.transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * rotateSpeed * angleSpeed);
+                position = player.transform.localPosition;
+                goRight = true;
             }
-        }
-        if (goLeft == true)
-        {
-            //comprobar que no gire mas de 90 grados con respecto a la direccion de la carretera
-            
-            Debug.Log($"Rotate speed = {rotateSpeed}- AngleSpeed = {angleSpeed}");
-            player.transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
-
-            if (playerMesh.transform.localEulerAngles.z < angleMaxZ || playerMesh.transform.localEulerAngles.z > 180)
+            if (Input.GetKeyUp(KeyCode.D))
             {
-                playerMesh.transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * rotateSpeed * angleSpeed);
+                goRight = false;
             }
-        }
-
-        
-
-        //Debug.Log("La rotacion actual del camino es: " + follower.getActualPathRotation());
-        //Debug.Log("La rotacion actual del jugador es: " + player.transform.rotation);
-        //siempre se mueve hacia delante: (habra que comprobar que no se salga del espacio que tenemos que delimitar
-        //Debug.Log("La posicion x del jugador es: " + player.transform.localPosition.x);
-        //Debug.Log("La posicion x del path es: " + follower.getCurrentPathCenter().x);
-        //player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
-        //Debug.Log("La distancia entre ellos es " + (Mathf.Abs(player.transform.position.x - follower.getCurrentPathCenter().x)));
-        //if (Mathf.Abs(player.transform.position.x - follower.getCurrentPathCenter().x) < 30)
-        /*if (player.transform.localPosition.x < 3 || player.transform.localPosition.x > -3)
-        {
-            Debug.Log("Se esta moviendo");
-            //player.transform.position += new Vector3(player.transform.forward.x, 0, 0) * Time.deltaTime * frontSpeed;
-            //player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
-        }
-        */
-        player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
-        /*
-        //Ecuaciones para el movimiento
-        if (goRight == true)
-        {
-            position = player.transform.localPosition;
-            if (position.y < 3)
+            //Izquierda
+            if (Input.GetKeyDown(KeyCode.A))
             {
-                player.transform.localPosition = position + new Vector3(0, 3, 0) * Time.deltaTime * velocity;
+                position = player.transform.localPosition;
+                goLeft = true;
             }
-        }
-        if (goLeft == true)
-        {
-            position = player.transform.localPosition;
-            if (position.y > -3)
+            if (Input.GetKeyUp(KeyCode.A))
             {
-                player.transform.localPosition = position + new Vector3(0, -3, 0) * Time.deltaTime * velocity;
+                goLeft = false;
             }
+            //Salto
+            if (Input.GetKeyDown(KeyCode.W))
+            {
+                //rb.AddForce(Vector3.up * jumpForce); //TODO: QUITAR SI FINALMENTE NO HAY SALTO
+                //animator.Play("05_A_Santa_jump_Sack");
+            }
+
+            if (goRight == true)
+            {
+                //Debug.Log($"Rotate speed = {rotateSpeed} - AngleSpeed = {angleSpeed}");
+                player.transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
+
+                if (playerMesh.transform.localEulerAngles.z > (360 - angleMaxZ) || playerMesh.transform.localEulerAngles.z < 180)
+                {
+                    playerMesh.transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * rotateSpeed * angleSpeed);
+                }
+            }
+            if (goLeft == true)
+            {
+                //comprobar que no gire mas de 90 grados con respecto a la direccion de la carretera
+
+                //Debug.Log($"Rotate speed = {rotateSpeed}- AngleSpeed = {angleSpeed}");
+                player.transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
+
+                if (playerMesh.transform.localEulerAngles.z < angleMaxZ || playerMesh.transform.localEulerAngles.z > 180)
+                {
+                    playerMesh.transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * rotateSpeed * angleSpeed);
+                }
+            }
+            player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
         }
-        */
     }
 
     //Función a la que se llama para ir a la derecha
@@ -180,6 +148,7 @@ public class Controll : MonoBehaviour
         player.transform.localPosition = originalPos;
         santa.transform.rotation = originalRotation;
         follower.ResetFollower();
+        playerMesh.transform.rotation = originalRotationMesh;
     }
 }
 

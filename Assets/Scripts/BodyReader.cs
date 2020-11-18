@@ -95,10 +95,10 @@ public class BodyReader : MonoBehaviour
         //Aquí, una vez se detecta el esqueleto, se calcula la posición del hombro izquierdo y dereho (deteción salto)
         if (HandLeft != null)
         {
-            userDetected = true;
-            timeWaiting = 0;
             HandLeftPos = HandLeft.transform.position;
             HandRightPos = HandRight.transform.position;
+            userDetected = ChechPositionInit();
+            timeWaiting = 0;
             lastWasNull = false;
         }
         else
@@ -109,60 +109,6 @@ public class BodyReader : MonoBehaviour
             HandRightPos = Vector3.zero;
             lastWasNull = true;
         }
-
-        /*
-        if (ShoulderRight != null)
-        {
-            ShoulderRightPos = ShoulderRight.transform.position;
-            lastWasNull2 = false;
-        }
-        else
-        {
-            ShoulderRightPos = Vector3.zero;
-            lastWasNull2 = true;
-        }
-        */
-        //Finalmente se comprueba que el jugador, estando en el suelo, ha saltado, evitando el caso concreto de la primera aparición del esqueleto
-        /* De momento no se saltará por lo que esta parte del codigo queda comentada
-        if (isGrounded && ((ShoulderLeftPos.y - InitialYPosition) > JumpThreshold) && (InitialYPosition != 0) && ((ShoulderRightPos.y - InitialYPosition2) > JumpThreshold) && (InitialYPosition != 0))
-        {
-            onJump.Invoke();
-            isGrounded = false;
-        }
-        else if (!isGrounded && ((ShoulderLeftPos.y - InitialYPosition) < JumpThreshold) && ((ShoulderRightPos.y - InitialYPosition) < JumpThreshold))
-        {
-            isGrounded = true;
-        }
-        */
-        /*
-        //Ahora se realizará lo mismo para realizar los movimientos de izquierda y derecha
-        //Derecha
-        if (StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) > Threshold) && (InitialYPositionLeft != 0) && contador == 0) 
-        {
-            onRight.Invoke();
-            StandRight = false;
-            contador = 1;
-        }
-        else if (!StandRight && ((ShoulderLeftPos.y - InitialYPositionLeft) < Threshold))
-        {
-            stopRight.Invoke();
-            StandRight = true;
-            contador = 0;
-        }
-        //Izquierda
-        if (StandLeft && ((ShoulderLeftPos.y - InitialYPositionLeft) < Threshold) && (InitialYPositionLeft != 0) && contador == 0)
-        {
-            onLeft.Invoke();
-            StandLeft = false;
-            contador = 1;
-        }
-        else if (!StandLeft && ((ShoulderLeftPos.y - InitialYPositionLeft) > Threshold))
-        {
-            stopRight.Invoke();
-            StandLeft = true;
-            contador = 0;
-        }
-        */
         
         if (userDetected && HandLeftPos.y > (HandRightPos.y + Threshold))//HandLeftPos.y > (InitialYPositionLeft + Threshold
         {
@@ -197,59 +143,23 @@ public class BodyReader : MonoBehaviour
         }
     }
 
-    /*
-      if (userDetected && HandLeftPos.y > (InitialYPositionLeft + Threshold))
+    public bool ChechPositionInit()
+    {
+        if (GameManager.Instance.playing) //si ya esta jugando y lo pierde un momento no hace falta que haga la posicion
         {
-            stopLeft.Invoke();
-            //giramos a la derecha en este caso
-            Debug.Log($"Deberia girar a la derecha: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
-            onRight.Invoke();
+            return true;
         }
-        else if (userDetected && HandLeftPos.y < (InitialYPositionLeft - Threshold))
-        {
-            stopRight.Invoke();
-            //giramos a la izq
-            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
-            onLeft.Invoke();
-        }
-        else if(userDetected && HandLeftPos.y > (InitialYPositionLeft - Threshold) && HandLeftPos.y < (InitialYPositionLeft + Threshold))
-        {
-            Debug.Log($"Deberia girar a la izquierda: CurrentY: {HandLeftPos.y} - InitialY: {InitialYPositionLeft} - Threeshold: {Threshold}");
-            stopLeft.Invoke();
-            stopRight.Invoke();
-        }
-    }
-     */
 
-    /*
-     Old version:
-            //Derecha
-        if (StandRight && ((ShoulderLeftPos.x - InitialXPosition) > RightThreshold) && (InitialXPosition != 0) && contador == 0)
+        GameObject Head = GameObject.Find("Head");
+
+        //comprobar que la cabeza este por debajo de ambas manos
+        if (Head != null && Head.transform.position.y < HandLeftPos.y && Head.transform.position.y < HandRightPos.y)
         {
-            onRight.Invoke();
-            StandRight = false;
-            contador = 1;
+            return true;
         }
-        else if (!StandRight && ((ShoulderLeftPos.x - InitialXPosition) < RightThreshold))
-        {
-            stopRight.Invoke();
-            StandRight = true;
-            contador = 0;
-        }
-        //Izquierda
-        if (StandLeft && ((ShoulderLeftPos.x - InitialXPosition) < LeftThreshold) && (InitialXPosition != 0) && contador == 0)
-        {
-            onLeft.Invoke();
-            StandLeft = false;
-            contador = 1;
-        }
-        else if (!StandLeft && ((ShoulderLeftPos.x - InitialXPosition) > LeftThreshold))
-        {
-            stopLeft.Invoke();
-            StandLeft = true;
-            contador = 0;
-        }
-     */
+
+        return false;
+    }
 
     //Aquí se guardarán las coordenadas de referencia iniciales
     private void RecordInitialPosition()

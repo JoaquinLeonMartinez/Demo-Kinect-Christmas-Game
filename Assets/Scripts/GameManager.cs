@@ -8,16 +8,18 @@ public class GameManager : MonoBehaviour
 {
 
     public int score; // OUT (En caso de querer guardar estadisticas)
+    public string finalMessage = "Premios conseguidos: ninguno, vete a tu casa";
     public int maxPresentsScore; //IN
     public int maxPresents; // IN
     public int targetScore; // IN
     public int prices; // IN
-    public bool wonPrice; //out
+    public Price wonPrice; 
     public int smallPresents;
     public int mediumPresents;
     public int bigPresents;
     public int maxEnergyInScenario; //IN
-    public int numOfSpawners; //parametrizar esto
+    public bool playing;
+    //public int numOfSpawners; //parametrizar esto
 
     public static GameManager Instance;
 
@@ -36,7 +38,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] List<GameObject> collectiblePrefabs;
     [SerializeField] GameObject ringsParent;
 
-    [SerializeField] SpawnGenerator spawnGenerator;
+    //[SerializeField] SpawnGenerator spawnGenerator;
 
     [SerializeField] BodyReader bodyReader;
 
@@ -67,6 +69,7 @@ public class GameManager : MonoBehaviour
         maxEnergy = 20;
         currentEnergy = maxEnergy;
         timeElapsed = 0;
+        playing = false;
         //END ENERGY BAR
 
         //GAMEPLAY
@@ -81,49 +84,32 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-
-        
-
-        if (timeElapsed >= energyUnitValue)
+        if (playing)
         {
-            timeElapsed = 0;
-            currentEnergy--;
-            energyBar.setEnergy(currentEnergy);
-            CheckEnergy();
-        }
-        else
-        {
-            timeElapsed += Time.deltaTime; //con esto sabremos cuanto tiempo ha pasado
+            if (timeElapsed >= energyUnitValue)
+            {
+                timeElapsed = 0;
+                currentEnergy--;
+                energyBar.setEnergy(currentEnergy);
+                CheckEnergy();
+            }
+            else
+            {
+                timeElapsed += Time.deltaTime; //con esto sabremos cuanto tiempo ha pasado
+            }
         }
     }
-
 
     void CheckEnergy()//a este metodo habra que llamarlo cada vez que decrementamos la energía
     {
         if (currentEnergy <= 0)
         {
-            CheckScore();
+            playing = false;
+            wonPrice = this.GetComponent<PricesManager>().CheckScore(score); //esto se encarga de actualizar los puntos en caso de que sea necesario
+            UIManager.UpdateScore(score, maxPresentsScore); //esto ira fuera
+            UIManager.UpdateFinalScreen();
             this.GetComponent<PauseGame>().EndMenu();
         }
-    }
-
-    void CheckScore()//comprobamos si ha conseguido el premio
-    {
-        //si entra aqui es que el juego ha acabado
-
-        if (score >= targetScore)
-        {
-            //TODO: Aqui habra que comprobar si quedan premios o no y actuar en consecuencia
-            if (prices > 0) //si quedan regalos
-            {
-                Debug.Log("Enhorabuena, te llevas un fantastico masajeador de pies!!");
-                prices--;
-                wonPrice = true;
-            }
-        }
-
-        SaveSystem.SaveDataScore();
-        //SaveSystem.UpdateGameData(); -> No es necesario, porque lo unico que utilizabamos de esto era prices, y ahora esto lo va a gestionar el PricesManager
     }
 
     public void UpdateScore(int _score)
@@ -131,7 +117,7 @@ public class GameManager : MonoBehaviour
         if (this.GetComponent<PauseGame>().state == MenuState.gameScreen)
         {
             this.score += _score;
-            UIManager.UpdateScore(score, maxPresentsScore);
+            UIManager.UpdateScore(score, maxPresentsScore); //esto ira fuera
         }
     }
 
@@ -168,9 +154,9 @@ public class GameManager : MonoBehaviour
     {
         ResetRings();
         ResetCollectables(); //Borramos los regalos de los spawners
-        spawnGenerator.DestroySpawners(); //Destruimos los spawners
-        Debug.Log($"Vamos a generar los spawners, en total generaremos {numOfSpawners}");
-        spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
+        //spawnGenerator.DestroySpawners(); //Destruimos los spawners
+        //Debug.Log($"Vamos a generar los spawners, en total generaremos {numOfSpawners}");
+        //spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
         SetupPresentsPoints(); // Los guardamos en una lista
 
 
@@ -181,8 +167,10 @@ public class GameManager : MonoBehaviour
         smallPresents = 0;
         mediumPresents = 0;
         bigPresents = 0;
-        wonPrice = false;
+        wonPrice = Price.none;
+        playing = true;
 
+        Debug.Log($"maxPresentsScoreActual = {maxPresentsScore} - LeftBig = {this.GetComponent<PricesManager>().leftBigPrices} - LeftMedium = {this.GetComponent<PricesManager>().leftMediumPrices} - LeftSmall = {this.GetComponent<PricesManager>().leftSmallPrices}");
         if (CheckGameRules()) //comprobamos que los valores sean coherentes
         {
             //Debug.Log("Los parametros son correctos, vamos a generar los collectible");
@@ -232,13 +220,13 @@ public class GameManager : MonoBehaviour
             int random = Random.Range(2, maxRandom);
             if (random == 2 && (pointsToDistribute > (numOfPresents - (mediumPresents + bigPresents))))
             {
-                pointsToDistribute -= 2;
+                pointsToDistribute -= (2*2);
                 mediumPresents++;
                 validRandom = true;
             }
             else if (random == 3 && (pointsToDistribute > ((numOfPresents - (mediumPresents + bigPresents)) + 1)))
             {
-                pointsToDistribute -= 3;
+                pointsToDistribute -= (3*2);
                 bigPresents++;
                 validRandom = true;
             }
@@ -335,13 +323,7 @@ public class GameManager : MonoBehaviour
             correct = false;
             return correct;
         }
-
-        if (targetScore > maxPresentsScore)
-        {
-            Debug.Log($"No cuadra la target score, targetScore = {targetScore} , maxPresentsScore = {maxPresentsScore}");
-            correct = false;
-            return correct;
-        }
+        
 
         return correct;
     }

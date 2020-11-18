@@ -2,33 +2,51 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum MenuState { pauseScreen, endScreen, gameScreen};
+public enum MenuState { initScreen, pauseScreen, endScreen, gameScreen};
 public class PauseGame : MonoBehaviour
 {
+    [SerializeField] GameObject initMenu;
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject endScreen;
     public bool gameActive;
     public float maxTimeWaiting;
     public float maxTimeEndMenu;
-    float timer;
+    float timerEndGame;
+    public float maxTimeInitMenu;
+    float timerInitMenu;
+
     public MenuState state;
 
     private void Start()
     {
         maxTimeWaiting = 5f;
         maxTimeEndMenu = 5f;
-        timer = maxTimeEndMenu;
+        maxTimeInitMenu = 5f;
+        timerEndGame = maxTimeEndMenu;
         FindMenu();
+        timerInitMenu = maxTimeInitMenu;
     }
 
     private void Update()
     {
-        //|| GameManager.Instance.UserDetected()
-        if ((Input.GetKeyDown(KeyCode.P) || GameManager.Instance.UserDetected()) && state == MenuState.pauseScreen) //cambiar esto por detectar al usuario
+
+        if ((Input.GetKeyDown(KeyCode.P) || GameManager.Instance.UserDetected()) && state == MenuState.initScreen) //pantalla de inicio, si pones los brazos arriba se pasa a pauseScreen
         {
-            Debug.Log("Ha detectado al usuario, empieza el juego");
-            //Esto debe ser salir del menu de pausa
-            GoToGame();
+            Debug.Log("Ha detectado al usuario, empieza el juego, pero antes a explicar lo del avioncito");
+            GoToPause();
+        }
+
+        if (state == MenuState.pauseScreen) //cambiar esto por detectar al usuario
+        {
+            if (timerInitMenu > 0)
+            {
+                timerInitMenu -= Time.deltaTime;
+            }
+            else
+            {
+                timerInitMenu = maxTimeInitMenu;
+                GoToGame();
+            }
         }
 
         //Si lleva mas de 5 segundos sin detectar a nadie y el juego esta corriendo se activa este menu
@@ -41,13 +59,13 @@ public class PauseGame : MonoBehaviour
 
         if (state == MenuState.endScreen)
         {
-            if (timer > 0)
+            if (timerEndGame > 0)
             {
-                timer -= Time.deltaTime;
+                timerEndGame -= Time.deltaTime;
             }
             else
             {
-                timer = maxTimeEndMenu;
+                timerEndGame = maxTimeEndMenu;
                 FindMenu();
             }
         }
@@ -55,10 +73,11 @@ public class PauseGame : MonoBehaviour
 
     public void FindMenu()
     {
-        state = MenuState.pauseScreen;
+        state = MenuState.initScreen;
         gameActive = false;
-        pauseMenu.SetActive(true);
+        initMenu.SetActive(true);
         endScreen.SetActive(false);
+        pauseMenu.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -77,6 +96,15 @@ public class PauseGame : MonoBehaviour
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
         ResetGame();
+    }
+
+    public void GoToPause()
+    {
+        state = MenuState.pauseScreen;
+        gameActive = false;
+        pauseMenu.SetActive(true);
+        initMenu.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void SetPause() 
