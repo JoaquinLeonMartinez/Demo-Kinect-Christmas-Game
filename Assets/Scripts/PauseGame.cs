@@ -47,6 +47,12 @@ public class PauseGame : MonoBehaviour
                 timerInitMenu = maxTimeInitMenu;
                 GoToGame();
             }
+
+            if (Input.GetKeyDown(KeyCode.O))
+            {
+                timerInitMenu = maxTimeInitMenu;
+                GoToGame();
+            }
         }
 
         //Si lleva mas de 5 segundos sin detectar a nadie y el juego esta corriendo se activa este menu

@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     public float energyUnitValue;
 
     [SerializeField] List<GameObject> collectiblePoints;
-    [SerializeField] GameObject collectable;
+    [SerializeField] GameObject collectablesParent;
 
     [SerializeField] GameObject collectiblePrefab;
     [SerializeField] List<GameObject> collectiblePrefabs;
@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     //[SerializeField] SpawnGenerator spawnGenerator;
 
     [SerializeField] BodyReader bodyReader;
+    [SerializeField] SpawnGenerator spawnGenerator;
+    public int numOfSpawners;
 
     void Awake()
     {
@@ -136,7 +138,7 @@ public class GameManager : MonoBehaviour
 
     void SetupPresentsPoints()
     {
-        foreach (Transform child in collectable.transform)
+        foreach (Transform child in collectablesParent.transform)
         {
             collectiblePoints.Add(child.gameObject);
             //comprobar si estos tienen hijos, si los tienen hay que destruirlos
@@ -154,9 +156,9 @@ public class GameManager : MonoBehaviour
     {
         ResetRings();
         ResetCollectables(); //Borramos los regalos de los spawners
-        //spawnGenerator.DestroySpawners(); //Destruimos los spawners
+        spawnGenerator.DestroySpawners(); //Destruimos los spawners
         //Debug.Log($"Vamos a generar los spawners, en total generaremos {numOfSpawners}");
-        //spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
+        spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
         SetupPresentsPoints(); // Los guardamos en una lista
 
 
@@ -220,13 +222,13 @@ public class GameManager : MonoBehaviour
             int random = Random.Range(2, maxRandom);
             if (random == 2 && (pointsToDistribute > (numOfPresents - (mediumPresents + bigPresents))))
             {
-                pointsToDistribute -= (2*2);
+                pointsToDistribute -= (collectiblePrefabs[maxRandom - 1].GetComponent<Collectible>().value);
                 mediumPresents++;
                 validRandom = true;
             }
             else if (random == 3 && (pointsToDistribute > ((numOfPresents - (mediumPresents + bigPresents)) + 1)))
             {
-                pointsToDistribute -= (3*2);
+                pointsToDistribute -= (collectiblePrefabs[maxRandom - 1].GetComponent<Collectible>().value);
                 bigPresents++;
                 validRandom = true;
             }
