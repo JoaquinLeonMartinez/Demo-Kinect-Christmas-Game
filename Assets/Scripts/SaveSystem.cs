@@ -24,7 +24,7 @@ public static class SaveSystem
         //formatter.Serialize(stream, data);
         //stream.Close();
     }*/
-
+    /*
     public static void UpdateGameData()
     {
         string path = Application.dataPath + "/jsonFiles";
@@ -46,7 +46,7 @@ public static class SaveSystem
             file.WriteLine(gameDataJson);
         }
     }
-
+    
     public static void SaveDataScore()
     {
         string path = Application.dataPath + "/jsonFiles";
@@ -92,5 +92,19 @@ public static class SaveSystem
 
 
     }
+    */
 
+    /*
+    public static void SaveDataPrices(int leftSmall, int leftMedium, int leftBig, System.DateTime lastCheck)
+    {
+        //LastCheck = 19/11/2020 0:00:00
+        PlayerPrefs.SetInt("leftSmallPrices", leftSmall);
+        PlayerPrefs.SetInt("leftMediumPrices", leftMedium);
+        PlayerPrefs.SetInt("leftBigPrices", leftBig);
+        PlayerPrefs.SetInt("lastCheckDay", lastCheck.Day);
+        PlayerPrefs.SetInt("lastCheckMonth", lastCheck.Month);
+        PlayerPrefs.SetInt("lastCheckDayYear", lastCheck.Year);
+        //PlayerPrefs.Save();
+    }
+    */
 }

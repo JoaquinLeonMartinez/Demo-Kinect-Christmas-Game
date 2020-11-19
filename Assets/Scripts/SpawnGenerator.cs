@@ -22,7 +22,7 @@ public class SpawnGenerator : MonoBehaviour
 
     public void GenerateSpawners(int numOfSpawners)
     {
-        distanceBetweenCollectables = 5;
+        distanceBetweenCollectables = 0; //temporal
         distanceTravelled = 0;
         float spawnerFrecuency = pathCreator.path.length / (float)numOfSpawners;
         //Debug.Log($"path legth:  { pathCreator.path.length }");
@@ -59,7 +59,7 @@ public class SpawnGenerator : MonoBehaviour
             Destroy(child.gameObject); //esto es lo que no tira
         }
 
-        Debug.Log($"Se han borrado los spawneres en teoria");
+        Debug.Log($"Se han borrado los spawners hijos del objeto parent");
     }
 
 

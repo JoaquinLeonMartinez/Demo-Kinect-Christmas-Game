@@ -149,6 +149,8 @@ public class Controll : MonoBehaviour
         santa.transform.rotation = originalRotation;
         follower.ResetFollower();
         playerMesh.transform.rotation = originalRotationMesh;
+        goRight = false;
+        goLeft = false;
     }
 }
 

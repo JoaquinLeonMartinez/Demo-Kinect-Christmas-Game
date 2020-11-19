@@ -47,7 +47,7 @@ public class Collectible : MonoBehaviour
             GameManager.Instance.UpdateScore(value);
         }
 
-        Debug.Log("Has recogido un objeto :D");
+        //Debug.Log("Has recogido un objeto :D");
 
         if (collectibleType == CollectibleType.Energy)
         {
