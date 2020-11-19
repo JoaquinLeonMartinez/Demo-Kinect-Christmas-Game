@@ -61,24 +61,10 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        /*
-        spawnGenerator.GenerateSpawners(numOfSpawners); //generamos los puntos de spawn
-        collectiblePoints = new List<GameObject>();
-        SetupPresentsPoints(); // los guardamos en una lista
-        */
         collectiblePoints = new List<GameObject>();
         //ENERGY BAR 
         playing = false;
         //END ENERGY BAR
-
-        //GAMEPLAY
-        
-
-
-        //UI
-        //energyBar.setMaxEnergy(maxEnergy);
-        //UpdateScore(score);
-        //END UI
     }
 
     public void SetUpGame()
@@ -123,6 +109,11 @@ public class GameManager : MonoBehaviour
             {
                 timeElapsed += Time.deltaTime; //con esto sabremos cuanto tiempo ha pasado
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
         }
     }
 
@@ -262,26 +253,6 @@ public class GameManager : MonoBehaviour
     {
         List<GameObject> auxList = new List<GameObject>();
 
-        //Ahora vamos con los aros de energia:
-        //TODO: de momento vamos a comentar los aros:
-        /*
-        while (eneryToGenerate > 0)
-        {
-            int randomPos = Random.Range(0, collectiblePoints.Count);
-                //instanciate
-            var newObject = Instantiate(collectiblePrefabs[3], collectiblePoints[randomPos].transform);
-            //newObject.GetComponent<Collectible>().Setup(1, CollectibleType.Energy); // no es necesario, ya le estamos indicando que es el prefab 4, que es el anillo 
-
-            auxList.Add(collectiblePoints[randomPos]); //add to aux list
-            collectiblePoints.Remove(collectiblePoints[randomPos]); //lo eliminamos de la lista para la siguiente iteracion
-
-            eneryToGenerate--; //esto dependera del random que se haya generado
-        }
-
-        Debug.Log("Se han generado correctamente los aros de energia");
-        */
-
-
         //Ahora vamos con los regalos:
 
         while (presentsToGenerate > 0)
@@ -335,8 +306,6 @@ public class GameManager : MonoBehaviour
             correct = false;
             return correct;
         }
-        
-
         return correct;
     }
 

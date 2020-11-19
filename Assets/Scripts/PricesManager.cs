@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public enum Price { none, small, medium, big}
 
@@ -25,9 +26,11 @@ public class PricesManager : MonoBehaviour
     int targetScoreBig = 240;
     int defaultMaxScore = 270;
 
-    //TODO: necesito fechas para saber cuantos premios se repartiran cada dia
-    //TODO: puedo hacer un diccionario por date en el cual se especifique cuantos regalos habra cada dia
-    //Podemos gestionar todo esto aqui y llamarlo desde el game manager
+    //Debug parameters
+    [SerializeField] Text small;
+    [SerializeField] Text medium;
+    [SerializeField] Text big;
+    [SerializeField] Text date;
 
     Dictionary<DateTime, DayPrices> pricesPerDay = new Dictionary<DateTime, DayPrices>();
 
@@ -37,7 +40,18 @@ public class PricesManager : MonoBehaviour
         //hay 140 (entre 100 y 150 puntos) (7 DIAS DEBE HABER 8 REGALOS Y EL RESTO 7 REGALOS)
         //hay 50 (entre 150 y 200 puntos) (12 DIAS DEBE HABER 3 REGALOS Y EL RESTO 2 REGALOS)
         //hay 30 (mas de 200 puntos) (11 DIAS DEBE HABER 2 REGALOS Y EL RESTO 1 REGALOS)
-        pricesPerDay.Add(new DateTime(2020, 11, 19), new DayPrices(8, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 19), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 20), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 23), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 24), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 25), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 26), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 27), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 11, 30), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 12, 01), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 12, 02), new DayPrices(5, 3, 2));
+
+        //A partir de aqui son los reales
         pricesPerDay.Add(new DateTime(2020, 12, 11), new DayPrices(8, 3, 2));
         pricesPerDay.Add(new DateTime(2020, 12, 12), new DayPrices(8, 3, 2));
         pricesPerDay.Add(new DateTime(2020, 12, 13), new DayPrices(8, 3, 2));
@@ -59,15 +73,22 @@ public class PricesManager : MonoBehaviour
         pricesPerDay.Add(new DateTime(2020, 12, 29), new DayPrices(7, 2, 1));
 
         LoadLastCheck(); //Cargamos de fichero la fecha del ultimo check que se hizo
+        //lastCheck = DateTime.Today;
+
         LoadPricesData(); //Cargamos los premios que sobraron
 
-        Debug.Log($"lastCheck = {lastCheck}, prices: samll = {leftSmallPrices}, medium = {leftMediumPrices}, big = {leftBigPrices}");
+        Debug.Log($"lastCheck = {lastCheck}, prices: small = {leftSmallPrices}, medium = {leftMediumPrices}, big = {leftBigPrices}");
     }
 
 
     void Update()
     {
         CheckTodaysPrices(); //tenemos que comprobar que no pasemos de dia (podriamos hacer un timer de 24 horas, pero es tonteria ya quee sto solo tiene una comparacion)
+
+        small.text = "SmallPricesLeft:" + leftSmallPrices;
+        medium.text = "MediumPricesLeft:" + leftMediumPrices;
+        big.text = "BigPricesLeft:" + leftBigPrices;
+        date.text = "LastCheck:" + lastCheck;
     }
 
 
@@ -94,6 +115,7 @@ public class PricesManager : MonoBehaviour
             lastCheck = System.DateTime.Today;
             SaveLastCheck();
             SaveDataPrices(); //por si se apagara el juego antes de finalizar la primera partida, sin esta linea se perderian los premios de este dia en ese caso
+            UpdateLimit(); //por si ha cambiado
             //Debug.Log("Hemos cargado la informacion de ayer");
         }
         else
@@ -113,7 +135,7 @@ public class PricesManager : MonoBehaviour
     public void LoadLastCheck()
     {
         //public DateTime (int year, int month, int day);
-        lastCheck = new DateTime(PlayerPrefs.GetInt("lastCheckDayYear"), PlayerPrefs.GetInt("lastCheckMonth"), PlayerPrefs.GetInt("lastCheckDay"));
+        lastCheck = new DateTime(PlayerPrefs.GetInt("lastCheckYear"), PlayerPrefs.GetInt("lastCheckMonth"), PlayerPrefs.GetInt("lastCheckDay"));
     }
 
     public void SaveDataPrices()
@@ -129,7 +151,7 @@ public class PricesManager : MonoBehaviour
         //LastCheck = 19/11/2020 0:00:00
         PlayerPrefs.SetInt("lastCheckDay", lastCheck.Day);
         PlayerPrefs.SetInt("lastCheckMonth", lastCheck.Month);
-        PlayerPrefs.SetInt("lastCheckDayYear", lastCheck.Year);
+        PlayerPrefs.SetInt("lastCheckYear", lastCheck.Year);
         PlayerPrefs.Save();
     }
 
