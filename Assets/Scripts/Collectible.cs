@@ -9,8 +9,8 @@ public class Collectible : MonoBehaviour
     public float rotateSpeed;
     public int value; //puntos que sumara al ser recogido
     public CollectibleType collectibleType;
-
     public GameObject scoreSpritePrefab;
+    public GameObject particleEffectPrefab;
 
     void Start()
     {
@@ -44,6 +44,9 @@ public class Collectible : MonoBehaviour
             GameObject childObject = Instantiate(scoreSpritePrefab, this.transform) as GameObject;
             childObject.transform.parent = this.transform.parent;
 
+            GameObject childObjectEffect = Instantiate(particleEffectPrefab, this.transform) as GameObject;
+            childObjectEffect.transform.parent = this.transform.parent;
+
             GameManager.Instance.UpdateScore(value);
         }
 
@@ -57,8 +60,6 @@ public class Collectible : MonoBehaviour
         {
             DestroyCollectible();
         }
-
-        
     }
 
     public void DestroyCollectible()
