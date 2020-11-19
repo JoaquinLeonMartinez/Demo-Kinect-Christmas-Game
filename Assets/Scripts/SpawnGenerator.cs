@@ -22,7 +22,7 @@ public class SpawnGenerator : MonoBehaviour
 
     public void GenerateSpawners(int numOfSpawners)
     {
-        distanceBetweenCollectables = 0; //temporal
+        distanceBetweenCollectables = 5; 
         distanceTravelled = 0;
         float spawnerFrecuency = pathCreator.path.length / (float)numOfSpawners;
         //Debug.Log($"path legth:  { pathCreator.path.length }");
@@ -30,10 +30,7 @@ public class SpawnGenerator : MonoBehaviour
         {
             distanceTravelled += spawnerFrecuency;
             transform.SetPositionAndRotation(pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction), pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction));
-            //transform.localRotation = pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction);
-            //transform.LookAt(pathCreator.path.GetDirection(distanceTravelled, endOfPathInstruction));
-            //transform.position = pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction);
-            //Debug.Log($"Transform Posicion: {transform.position} - Rotacion: {transform.rotation}  -- PathPoint Posicion: {pathCreator.path.GetPointAtDistance(distanceTravelled, endOfPathInstruction)} - Rotacion: {pathCreator.path.GetRotationAtDistance(distanceTravelled, endOfPathInstruction)}  ");
+
             if (currentSize <= 0)
             {
                 currentSize = Random.Range(minSizeGroup, maxSizeGroup + 1);
@@ -45,7 +42,7 @@ public class SpawnGenerator : MonoBehaviour
                 currentPath = nextPath;
             }
 
-            transform.localPosition = new Vector3(transform.position.x ,transform.position.y, transform.position.z + distanceBetweenCollectables * currentPath);
+            transform.localPosition = new Vector3(transform.position.x + distanceBetweenCollectables * transform.position.normalized.x * currentPath, transform.position.y, transform.position.z + distanceBetweenCollectables * transform.position.normalized.z * currentPath);
             var spawner = Instantiate(spawnerPrefab, transform);
             spawner.transform.parent = spawnerParent.transform; //todos los spawners son hijos del mismo objeto
             currentSize--;
