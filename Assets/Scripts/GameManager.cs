@@ -90,6 +90,7 @@ public class GameManager : MonoBehaviour
         //ENDGAMEPLAY
         //UI
         energyBar.setMaxEnergy(maxEnergy);
+        energyBar.setEnergy(currentEnergy);
         UpdateScore(score);
         //END UI
     }
@@ -331,7 +332,7 @@ public class GameManager : MonoBehaviour
 
         GetComponent<PricesManager>().UpdateLimit(); //esto actualiza el target score
         maxEnergy = 20;
-        currentEnergy = maxEnergy;
+        currentEnergy = 17;//maxEnergy;
         timeElapsed = 0;
         score = 0;
         maxPresents = 40;
