@@ -114,6 +114,7 @@ public class PricesManager : MonoBehaviour
             leftBigPrices += todayPrices.bigPrices;
             lastCheck = System.DateTime.Today;
             SaveLastCheck();
+            Debug.Log("Actualizamos al inicio porque es un nuevo dia");
             SaveDataPrices(); //por si se apagara el juego antes de finalizar la primera partida, sin esta linea se perderian los premios de este dia en ese caso
             UpdateLimit(); //por si ha cambiado
             //Debug.Log("Hemos cargado la informacion de ayer");
