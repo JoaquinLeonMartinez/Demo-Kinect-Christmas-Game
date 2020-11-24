@@ -41435,6 +41435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Melchor
       objectReference: {fileID: 0}
+    - target: {fileID: 8949243593693253600, guid: 8be6331d022d1b14182f64d3e0fa86b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8be6331d022d1b14182f64d3e0fa86b6, type: 3}
 --- !u!1001 &1255035301757048980
@@ -41447,6 +41451,10 @@ PrefabInstance:
     - target: {fileID: 3516542093295633664, guid: 1009859b61c8ded4f88a741f3b96205f, type: 3}
       propertyPath: m_Name
       value: FinalRingFix
+      objectReference: {fileID: 0}
+    - target: {fileID: 3516542093295633664, guid: 1009859b61c8ded4f88a741f3b96205f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4289279297369677754, guid: 1009859b61c8ded4f88a741f3b96205f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -41549,6 +41557,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gaspar
       objectReference: {fileID: 0}
+    - target: {fileID: 3430871833571498580, guid: 448c5053007df194ea2adb96118fab03, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 448c5053007df194ea2adb96118fab03, type: 3}
 --- !u!1001 &5824411189772546857
@@ -41606,6 +41618,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SantaSleigh2
       objectReference: {fileID: 0}
+    - target: {fileID: 3371963809096503301, guid: ca9c3c0cf1358164f818f7f3527ef654, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca9c3c0cf1358164f818f7f3527ef654, type: 3}
 --- !u!1001 &5974599111047021589
@@ -41618,6 +41634,10 @@ PrefabInstance:
     - target: {fileID: 5120252224302471949, guid: 0f1a530e3fb6b964c8a7102404f5f8a1, type: 3}
       propertyPath: m_Name
       value: Baltasar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5120252224302471949, guid: 0f1a530e3fb6b964c8a7102404f5f8a1, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5495828510843044279, guid: 0f1a530e3fb6b964c8a7102404f5f8a1, type: 3}
       propertyPath: m_LocalPosition.x
