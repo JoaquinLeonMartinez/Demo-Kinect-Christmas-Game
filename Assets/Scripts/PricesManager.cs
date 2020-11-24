@@ -13,7 +13,7 @@ public class PricesManager : MonoBehaviour
      *  Tenemos una determinada cantidad de premios en total
      *  Cada dia se libera uno
      */
-    DateTime lastCheck;
+    public DateTime lastCheck;
 
     //Cargar desde fichero
 

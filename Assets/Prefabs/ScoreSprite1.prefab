@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2880820039548062706}
   - component: {fileID: -4019346168564287430}
   m_Layer: 0
-  m_Name: ScoreSprite
+  m_Name: ScoreSprite1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,9 +73,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eb0e824a7381be547a739889784eacb8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 920903088450efb41a0ba61db47586a1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 15.52, y: 9}

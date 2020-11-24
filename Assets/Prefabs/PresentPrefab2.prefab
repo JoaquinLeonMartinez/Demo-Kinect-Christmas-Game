@@ -178,7 +178,7 @@ MonoBehaviour:
   rotateSpeed: 2
   value: 5
   collectibleType: 1
-  scoreSpritePrefab: {fileID: 2880820039548062709, guid: 70931e51a80d9944993058260ef90823, type: 3}
+  scoreSpritePrefab: {fileID: 2880820039548062709, guid: 66a05632839921e4a8860c3b1a746cb6, type: 3}
   particleEffectPrefab: {fileID: 3809290212516925343, guid: 09b065e8dc10d394abac2858566b490b, type: 3}
 --- !u!1 &4479980502073841653
 GameObject:

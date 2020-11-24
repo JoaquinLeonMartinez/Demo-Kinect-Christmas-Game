@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 //using Kinect = Windows.Kinect;
 
 public class Controll : MonoBehaviour
@@ -32,6 +33,8 @@ public class Controll : MonoBehaviour
     Quaternion originalRotation;
     Quaternion originalRotationMesh;
 
+    
+
     [SerializeField] Follower follower;
     [SerializeField] GameObject santa;
 
@@ -43,10 +46,16 @@ public class Controll : MonoBehaviour
     public float angleSpeed;
 
     [SerializeField] GameObject playerMesh;
+    [SerializeField] List<GameObject> playerMeshes;
+    DateTime christmasEveDate;
+
     public float angleMaxZ;
 
     void Start()
     {
+        christmasEveDate = new DateTime(2020, 12, 25);
+        //CheckDate();
+        CheckDateFake();
         angleMaxZ = 40f;
         angleSpeed = 1f;
         //rb = player.GetComponent<Rigidbody>(); //No se usara de momento ya que no se puede saltar
@@ -57,6 +66,14 @@ public class Controll : MonoBehaviour
 
     void Update()
     {
+        if (DateTime.Compare(GameManager.Instance.gameObject.GetComponent<PricesManager>().lastCheck, DateTime.Today) < 0) //si entra aqui es porque la ultima vez que se comprobo fue ayer
+        {
+            //CheckDate();
+            CheckDateFake();
+            originalRotationMesh = playerMesh.transform.rotation;
+        }
+
+
         if (GameManager.Instance.playing)
         {
             //Controles de teclado que simulan las acciones de kinect
@@ -90,8 +107,10 @@ public class Controll : MonoBehaviour
             if (goRight == true)
             {
                 //Debug.Log($"Rotate speed = {rotateSpeed} - AngleSpeed = {angleSpeed}");
+                //Cambiar direccion
                 player.transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
 
+                //Giro decorativo
                 if (playerMesh.transform.localEulerAngles.z > (360 - angleMaxZ) || playerMesh.transform.localEulerAngles.z < 180)
                 {
                     playerMesh.transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * rotateSpeed * angleSpeed);
@@ -102,13 +121,16 @@ public class Controll : MonoBehaviour
                 //comprobar que no gire mas de 90 grados con respecto a la direccion de la carretera
 
                 //Debug.Log($"Rotate speed = {rotateSpeed}- AngleSpeed = {angleSpeed}");
+                //Cambiar direccion
                 player.transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
 
+                //Giro decorativo
                 if (playerMesh.transform.localEulerAngles.z < angleMaxZ || playerMesh.transform.localEulerAngles.z > 180)
                 {
                     playerMesh.transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * rotateSpeed * angleSpeed);
                 }
             }
+            //Movimiento hacia delante
             player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
         }
     }
@@ -151,6 +173,51 @@ public class Controll : MonoBehaviour
         playerMesh.transform.rotation = originalRotationMesh;
         goRight = false;
         goLeft = false;
+    }
+
+    public void CheckDate()
+    {
+        //si es mas del dia 25 se pone a un rey mago aleatorio, sino papa noel
+        if (DateTime.Compare(christmasEveDate, DateTime.Today) >= 0) //si christmasEveDate es mayor o igual que today entramos
+        {
+            //papa noel
+            playerMesh = playerMeshes[0];
+
+        }
+        else
+        {
+            //rey mago random
+            playerMesh = playerMeshes[UnityEngine.Random.Range(1,4)];
+        }
+
+        for (int i = 0; i < playerMeshes.Count; i++)
+        {
+            if (playerMesh != playerMeshes[i])
+            {
+                playerMeshes[i].SetActive(false);
+            }
+            else
+            {
+                playerMeshes[i].SetActive(true);
+            }
+        }
+    }
+
+    public void CheckDateFake() //solo para testear
+    {
+        playerMesh = playerMeshes[UnityEngine.Random.Range(0, 4)];
+
+        for (int i = 0; i < playerMeshes.Count; i++)
+        {
+            if (playerMesh != playerMeshes[i])
+            {
+                playerMeshes[i].SetActive(false);
+            }
+            else
+            {
+                playerMeshes[i].SetActive(true);
+            }
+        }
     }
 }
 

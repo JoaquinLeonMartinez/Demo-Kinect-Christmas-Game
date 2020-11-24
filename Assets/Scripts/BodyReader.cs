@@ -38,7 +38,7 @@ public class BodyReader : MonoBehaviour
 
     //Rango que definirá cuando el jugador se ha inclinado a cualquiera de los dos lados
     //public float RightThreshold;
-    public float Threshold = 0.1f;
+    public float Threshold = 0;//0.01f;
     //public float LeftThreshold = 0.1f;
 
     //Tiempo que se le deja al jugador para colocarse bien
@@ -121,7 +121,7 @@ public class BodyReader : MonoBehaviour
             {
                 rotation = rotationLimit;
             }
-            controll.MoveRight(rotation * 0.25f);
+            controll.MoveRight(rotation * 0.4f);
 
         }
         else if (userDetected && HandLeftPos.y < (HandRightPos.y - Threshold))
@@ -134,13 +134,14 @@ public class BodyReader : MonoBehaviour
             {
                 rotation = rotationLimit;
             }
-            controll.MoveLeft(rotation*0.25f);
+            controll.MoveLeft(rotation*0.4f);
         }
-        else if(userDetected && HandLeftPos.y > (HandRightPos.y - Threshold) && HandLeftPos.y < (HandRightPos.y + Threshold))
+        /*else if(userDetected && HandLeftPos.y > (HandRightPos.y - Threshold) && HandLeftPos.y < (HandRightPos.y + Threshold))
         {
+            Debug.Log("Aqui no deberia entrar, significa que va recto");
             stopLeft.Invoke();
             stopRight.Invoke();
-        }
+        }*/
     }
 
     public bool ChechPositionInit()

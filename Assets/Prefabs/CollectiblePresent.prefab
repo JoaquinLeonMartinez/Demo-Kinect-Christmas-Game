@@ -130,7 +130,7 @@ MonoBehaviour:
   rotateSpeed: 2
   value: 1
   collectibleType: 1
-  scoreSpritePrefab: {fileID: 2880820039548062709, guid: 70931e51a80d9944993058260ef90823, type: 3}
+  scoreSpritePrefab: {fileID: 2880820039548062709, guid: 5554790f8e6176045aeb6d307dea92f2, type: 3}
   particleEffectPrefab: {fileID: 3809290212516925343, guid: 09b065e8dc10d394abac2858566b490b, type: 3}
 --- !u!65 &1703346124471485708
 BoxCollider:
