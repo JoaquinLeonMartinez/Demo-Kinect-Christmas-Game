@@ -15,6 +15,8 @@ public class PauseGame : MonoBehaviour
     public float maxTimeInitMenu;
     float timerInitMenu;
 
+    [SerializeField] GameObject EnergyBar;
+
     public MenuState state;
 
     private void Start()
@@ -89,6 +91,8 @@ public class PauseGame : MonoBehaviour
 
     public void EndMenu()
     {
+        EnergyBar.SetActive(false);
+        GameManager.Instance?.GetComponent<CameraManager>().ChangeCameras();
         state = MenuState.endScreen;
         gameActive = false;
         endScreen.SetActive(true);
@@ -98,9 +102,11 @@ public class PauseGame : MonoBehaviour
     public void GoToGame()
     {
         state = MenuState.gameScreen;
+        EnergyBar.SetActive(true);
         gameActive = true;
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+        GameManager.Instance?.GetComponent<CameraManager>().ChangeCameras();
         ResetGame();
     }
 
