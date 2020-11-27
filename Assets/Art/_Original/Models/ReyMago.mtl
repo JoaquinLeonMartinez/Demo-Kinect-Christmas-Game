@@ -1,0 +1,16 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 28.11.2020 00:05:56
+
+newmtl PT_Medieval_mat
+	Ns 0.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.0000 0.0000 0.0000
+	Kd 0.8000 0.8000 0.8000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\05 - ViralStudios\_Git\ChristmasWithKinect\Assets\Art\Polytope Studio\Lowpoly Medieval Characters\Sources\Meshes\PT_Medieval_Priest_StPatrick.fbm\PT_Medieval_texture.tga
+	map_Kd D:\05 - ViralStudios\_Git\ChristmasWithKinect\Assets\Art\Polytope Studio\Lowpoly Medieval Characters\Sources\Meshes\PT_Medieval_Priest_StPatrick.fbm\PT_Medieval_texture.tga

@@ -1,0 +1,4589 @@
+fileFormatVersion: 2
+guid: e23cb0967df6f4b48b68cd76c6aed9bb
+timeCreated: 1533046249
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Arm.L
+    100002: Arm.R
+    100004: Arm_Stretch.L
+    100006: Arm_Stretch.L_end
+    100008: Arm_Stretch.R
+    100010: Arm_Stretch.R_end
+    100012: Belly
+    100014: Belly_end
+    100016: //RootNode
+    100018: Camel
+    100020: Camel_bones
+    100022: Chest
+    100024: Chest_end
+    100026: ear_01.L
+    100028: ear_01.R
+    100030: ear_02.L
+    100032: ear_02.L_end
+    100034: ear_02.R
+    100036: ear_02.R_end
+    100038: FATHER
+    100040: Foot.L
+    100042: Foot.L_end
+    100044: Foot.R
+    100046: Foot.R_end
+    100048: Foot_IK.L
+    100050: Foot_IK.R
+    100052: Foot_IK_Pole.L
+    100054: Foot_IK_Pole.L_end
+    100056: Foot_IK_Pole.R
+    100058: Foot_IK_Pole.R_end
+    100060: Forearm.L
+    100062: Forearm.L_end
+    100064: Forearm.R
+    100066: Forearm.R_end
+    100068: Forearm_IK.L
+    100070: Forearm_IK.R
+    100072: Forearm_IK_Pole.L
+    100074: Forearm_IK_Pole.L_end
+    100076: Forearm_IK_Pole.R
+    100078: Forearm_IK_Pole.R_end
+    100080: Hand.L
+    100082: Hand.L_end
+    100084: Hand.R
+    100086: Hand.R_end
+    100088: Head
+    100090: Leg.L
+    100092: Leg.L_end
+    100094: Leg.R
+    100096: Leg.R_end
+    100098: Leg_Stretch.L
+    100100: Leg_Stretch.L_end
+    100102: Leg_Stretch.R
+    100104: Leg_Stretch.R_end
+    100106: Lyp
+    100108: Lyp_end
+    100110: Mouth
+    100112: neck_01
+    100114: neck_02
+    100116: neck_03
+    100118: neck_04
+    100120: Pelvis.L
+    100122: Pelvis.R
+    100124: Sholder.L
+    100126: Sholder.R
+    100128: spin_01
+    100130: spin_02
+    100132: spin_03
+    100134: tail_00
+    100136: tail_01
+    100138: tail_02
+    100140: tail_03
+    100142: tail_04
+    100144: tail_04_end
+    100146: Thigh.L
+    100148: Thigh.R
+    100150: tongue_01
+    100152: tongue_02
+    100154: tongue_03
+    100156: tongue_04
+    100158: tongue_04_end
+    400000: Arm.L
+    400002: Arm.R
+    400004: Arm_Stretch.L
+    400006: Arm_Stretch.L_end
+    400008: Arm_Stretch.R
+    400010: Arm_Stretch.R_end
+    400012: Belly
+    400014: Belly_end
+    400016: //RootNode
+    400018: Camel
+    400020: Camel_bones
+    400022: Chest
+    400024: Chest_end
+    400026: ear_01.L
+    400028: ear_01.R
+    400030: ear_02.L
+    400032: ear_02.L_end
+    400034: ear_02.R
+    400036: ear_02.R_end
+    400038: FATHER
+    400040: Foot.L
+    400042: Foot.L_end
+    400044: Foot.R
+    400046: Foot.R_end
+    400048: Foot_IK.L
+    400050: Foot_IK.R
+    400052: Foot_IK_Pole.L
+    400054: Foot_IK_Pole.L_end
+    400056: Foot_IK_Pole.R
+    400058: Foot_IK_Pole.R_end
+    400060: Forearm.L
+    400062: Forearm.L_end
+    400064: Forearm.R
+    400066: Forearm.R_end
+    400068: Forearm_IK.L
+    400070: Forearm_IK.R
+    400072: Forearm_IK_Pole.L
+    400074: Forearm_IK_Pole.L_end
+    400076: Forearm_IK_Pole.R
+    400078: Forearm_IK_Pole.R_end
+    400080: Hand.L
+    400082: Hand.L_end
+    400084: Hand.R
+    400086: Hand.R_end
+    400088: Head
+    400090: Leg.L
+    400092: Leg.L_end
+    400094: Leg.R
+    400096: Leg.R_end
+    400098: Leg_Stretch.L
+    400100: Leg_Stretch.L_end
+    400102: Leg_Stretch.R
+    400104: Leg_Stretch.R_end
+    400106: Lyp
+    400108: Lyp_end
+    400110: Mouth
+    400112: neck_01
+    400114: neck_02
+    400116: neck_03
+    400118: neck_04
+    400120: Pelvis.L
+    400122: Pelvis.R
+    400124: Sholder.L
+    400126: Sholder.R
+    400128: spin_01
+    400130: spin_02
+    400132: spin_03
+    400134: tail_00
+    400136: tail_01
+    400138: tail_02
+    400140: tail_03
+    400142: tail_04
+    400144: tail_04_end
+    400146: Thigh.L
+    400148: Thigh.R
+    400150: tongue_01
+    400152: tongue_02
+    400154: tongue_03
+    400156: tongue_04
+    400158: tongue_04_end
+    4300000: Camel
+    7400000: Camel_bones|Complete_animations
+    7400002: Attack
+    7400004: Bite_01
+    7400006: Bite_02
+    7400008: Die
+    7400010: Drink
+    7400012: Eat_bush
+    7400014: Eat_grass
+    7400016: Get_up
+    7400018: Hit
+    7400020: Idle_01
+    7400022: Idle_02
+    7400024: Kick
+    7400026: Run
+    7400028: Seated
+    7400030: Sit
+    7400032: Sleep
+    7400034: Camel_bones|Sleeping
+    7400036: Stop_01
+    7400038: Stop_02
+    7400040: Wake_up
+    7400042: Walk
+    7400044: Walk_turn_left
+    7400046: Walk_turn_right
+    7400048: Lay_down
+    9500000: //RootNode
+    13700000: Camel
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Attack
+      takeName: Camel_bones|Attack
+      firstFrame: 0
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bite_01
+      takeName: Camel_bones|Bite_01
+      firstFrame: 0
+      lastFrame: 45
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Bite_02
+      takeName: Camel_bones|Bite_02
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Die
+      takeName: Camel_bones|Die
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Drink
+      takeName: Camel_bones|Drink
+      firstFrame: 0
+      lastFrame: 200
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eat_bush
+      takeName: Camel_bones|Eat_bush
+      firstFrame: 0
+      lastFrame: 141
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Eat_grass
+      takeName: Camel_bones|Eat_grass
+      firstFrame: 0
+      lastFrame: 260
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Get_up
+      takeName: Camel_bones|Get_up
+      firstFrame: 0
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Hit
+      takeName: Camel_bones|Hit
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_01
+      takeName: Camel_bones|Iddle_01
+      firstFrame: 0
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Idle_02
+      takeName: Camel_bones|Iddle_02
+      firstFrame: 0
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Kick
+      takeName: Camel_bones|Kick
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Lay_down
+      takeName: Camel_bones|Lay_down
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Run
+      takeName: Camel_bones|Run
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Seated
+      takeName: Camel_bones|Seated
+      firstFrame: 0
+      lastFrame: 150
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sit
+      takeName: Camel_bones|Sit
+      firstFrame: 0
+      lastFrame: 80
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Sleep
+      takeName: Camel_bones|Sleep
+      firstFrame: 0
+      lastFrame: 90
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stop_01
+      takeName: Camel_bones|Stop_01
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Stop_02
+      takeName: Camel_bones|Stop_02
+      firstFrame: 0
+      lastFrame: 120
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Wake_up
+      takeName: Camel_bones|Wake_up
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk
+      takeName: Camel_bones|Walk
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_turn_left
+      takeName: Camel_bones|Walk_turn_left
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Walk_turn_right
+      takeName: Camel_bones|Walk_turn_right
+      firstFrame: 0
+      lastFrame: 50
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Camel
+        weight: 1
+      - path: Camel_bones
+        weight: 1
+      - path: Camel_bones/FATHER
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg.L/Leg.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.L/Thigh.L/Leg_Stretch.L/Leg_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg.R/Leg.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/Pelvis.R/Thigh.R/Leg_Stretch.R/Leg_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/Belly/Belly_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Chest/Chest_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.L/ear_02.L/ear_02.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/ear_01.R/ear_02.R/ear_02.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Lyp/Lyp_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/neck_01/neck_02/neck_03/neck_04/Head/Mouth/tongue_01/tongue_02/tongue_03/tongue_04/tongue_04_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Arm_Stretch.L/Arm_Stretch.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.L/Arm.L/Forearm.L/Forearm.L_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Arm_Stretch.R/Arm_Stretch.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/spin_02/spin_01/Sholder.R/Arm.R/Forearm.R/Forearm.R_end
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04
+        weight: 1
+      - path: Camel_bones/FATHER/spin_03/tail_00/tail_01/tail_02/tail_03/tail_04/tail_04_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot.L/Foot.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Foot_IK.L/Foot_IK_Pole.L/Foot_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot.R/Foot.R_end
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Foot_IK.R/Foot_IK_Pole.R/Foot_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Forearm_IK_Pole.L/Forearm_IK_Pole.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L
+        weight: 1
+      - path: Camel_bones/Forearm_IK.L/Hand.L/Hand.L_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Forearm_IK_Pole.R/Forearm_IK_Pole.R_end
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R
+        weight: 1
+      - path: Camel_bones/Forearm_IK.R/Hand.R/Hand.R_end
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,335 @@
+fileFormatVersion: 2
+guid: 0071be32a37937740b309ad1d79971ef
+timeCreated: 1491995230
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Bone002
+    100002: Bone003
+    100004: Bone004
+    100006: Bone005
+    100008: Bone006
+    100010: Bone009
+    100012: Bone010
+    100014: Bone011
+    100016: Bone012
+    100018: Bone013
+    100020: Bone016
+    100022: Bone017
+    100024: Bone021
+    100026: Bone022
+    100028: Bone033
+    100030: Bone034
+    100032: Bone035
+    100034: Bone036
+    100036: Bone037
+    100038: Bone038
+    100040: Bone039
+    100042: Bone040
+    100044: Bone041
+    100046: Bone042
+    100048: Bone045
+    100050: Bone046
+    100052: Bone047
+    100054: Bone048
+    100056: Bone049
+    100058: Bone050
+    100060: Bone052
+    100062: Bone053
+    100064: Bone054
+    100066: Bone055
+    100068: Bone056
+    100070: Bone057
+    100072: Bone058
+    100074: Bone059
+    100076: Bone060
+    100078: Bone061
+    100080: Bone062
+    100082: Bone063
+    100084: Bone064
+    100086: Bone065
+    100088: deer
+    100090: //RootNode
+    100092: deer_Main_ctrl
+    100094: Head
+    100096: Neck
+    100098: Pelvis_L
+    100100: Pelvis_R
+    100102: Point001
+    100104: RibCage
+    100106: Root
+    100108: Scapula_L
+    100110: Scapula_R
+    100112: Spine
+    100114: Tale
+    400000: Bone002
+    400002: Bone003
+    400004: Bone004
+    400006: Bone005
+    400008: Bone006
+    400010: Bone009
+    400012: Bone010
+    400014: Bone011
+    400016: Bone012
+    400018: Bone013
+    400020: Bone016
+    400022: Bone017
+    400024: Bone021
+    400026: Bone022
+    400028: Bone033
+    400030: Bone034
+    400032: Bone035
+    400034: Bone036
+    400036: Bone037
+    400038: Bone038
+    400040: Bone039
+    400042: Bone040
+    400044: Bone041
+    400046: Bone042
+    400048: Bone045
+    400050: Bone046
+    400052: Bone047
+    400054: Bone048
+    400056: Bone049
+    400058: Bone050
+    400060: Bone052
+    400062: Bone053
+    400064: Bone054
+    400066: Bone055
+    400068: Bone056
+    400070: Bone057
+    400072: Bone058
+    400074: Bone059
+    400076: Bone060
+    400078: Bone061
+    400080: Bone062
+    400082: Bone063
+    400084: Bone064
+    400086: Bone065
+    400088: deer
+    400090: //RootNode
+    400092: deer_Main_ctrl
+    400094: Head
+    400096: Neck
+    400098: Pelvis_L
+    400100: Pelvis_R
+    400102: Point001
+    400104: RibCage
+    400106: Root
+    400108: Scapula_L
+    400110: Scapula_R
+    400112: Spine
+    400114: Tale
+    4300000: deer
+    7400000: eating
+    9500000: //RootNode
+    13700000: deer
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.1
+    animationPositionError: 0.1
+    animationScaleError: 0.1
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: eating
+      takeName: Take 001
+      firstFrame: 173
+      lastFrame: 243
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: deer
+        weight: 1
+      - path: deer_Main_ctrl
+        weight: 1
+      - path: deer_Main_ctrl/Point001
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_L
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_L/Bone033
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_L/Bone033/Bone034
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_L/Bone033/Bone034/Bone035
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_L/Bone033/Bone034/Bone035/Bone036
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_L/Bone033/Bone034/Bone035/Bone036/Bone037
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_R
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_R/Bone002
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_R/Bone002/Bone003
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_R/Bone002/Bone003/Bone004
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_R/Bone002/Bone003/Bone004/Bone005
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Pelvis_R/Bone002/Bone003/Bone004/Bone005/Bone006
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck/Bone045
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck/Bone045/Bone046
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck/Bone045/Bone046/Bone047
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck/Bone045/Bone046/Bone047/Bone048
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck/Bone045/Bone046/Bone047/Bone048/Bone049
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Neck/Bone045/Bone046/Bone047/Bone048/Bone049/Bone050/Head
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_L
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_L/Bone038
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_L/Bone038/Bone039
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_L/Bone038/Bone039/Bone040
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_L/Bone038/Bone039/Bone040/Bone041
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_L/Bone038/Bone039/Bone040/Bone041/Bone042
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_R
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_R/Bone009
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_R/Bone009/Bone010
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_R/Bone009/Bone010/Bone011
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_R/Bone009/Bone010/Bone011/Bone012
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Spine/Bone016/Bone021/Bone017/Bone022/RibCage/Scapula_R/Bone009/Bone010/Bone011/Bone012/Bone013
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059/Bone060
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059/Bone060/Bone061
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059/Bone060/Bone061/Bone062
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059/Bone060/Bone061/Bone062/Bone063
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059/Bone060/Bone061/Bone062/Bone063/Bone064
+        weight: 1
+      - path: deer_Main_ctrl/Point001/Root/Tale/Bone052/Bone053/Bone054/Bone055/Bone056/Bone057/Bone058/Bone059/Bone060/Bone061/Bone062/Bone063/Bone064/Bone065
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: deer_Main_ctrl
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
