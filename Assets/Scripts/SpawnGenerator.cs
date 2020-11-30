@@ -56,7 +56,7 @@ public class SpawnGenerator : MonoBehaviour
             Destroy(child.gameObject); //esto es lo que no tira
         }
 
-        Debug.Log($"Se han borrado los spawners hijos del objeto parent");
+        //Debug.Log($"Se han borrado los spawners hijos del objeto parent");
     }
 
 

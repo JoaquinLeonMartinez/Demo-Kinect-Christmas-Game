@@ -79,7 +79,7 @@ public class PricesManager : MonoBehaviour
 
         LoadPricesData(); //Cargamos los premios que sobraron
 
-        Debug.Log($"lastCheck = {lastCheck}, prices: small = {leftSmallPrices}, medium = {leftMediumPrices}, big = {leftBigPrices}");
+        //Debug.Log($"lastCheck = {lastCheck}, prices: small = {leftSmallPrices}, medium = {leftMediumPrices}, big = {leftBigPrices}");
     }
 
 

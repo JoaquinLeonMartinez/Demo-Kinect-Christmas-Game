@@ -33,6 +33,8 @@ public class Controll : MonoBehaviour
     Quaternion originalRotation;
     Quaternion originalRotationMesh;
 
+    public bool isSanta = true;
+
     
 
     [SerializeField] Follower follower;
@@ -68,8 +70,8 @@ public class Controll : MonoBehaviour
     {
         if (DateTime.Compare(GameManager.Instance.gameObject.GetComponent<PricesManager>().lastCheck, DateTime.Today) < 0) //si entra aqui es porque la ultima vez que se comprobo fue ayer
         {
-            //CheckDate();
-            CheckDateFake();
+            CheckDate();
+            //CheckDateFake();
             originalRotationMesh = playerMesh.transform.rotation;
         }
 
@@ -110,11 +112,16 @@ public class Controll : MonoBehaviour
                 //Cambiar direccion
                 player.transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
 
-                //Giro decorativo
-                if (playerMesh.transform.localEulerAngles.z > (360 - angleMaxZ) || playerMesh.transform.localEulerAngles.z < 180)
+                //Giro decorativo (si es santa va hacia un lado y si es el camello va hacia otro)
+                if (isSanta)
                 {
-                    playerMesh.transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * rotateSpeed * angleSpeed);
+                    turnRight();
                 }
+                else
+                {
+                    turnLeft();
+                }
+                
             }
             if (goLeft == true)
             {
@@ -125,13 +132,34 @@ public class Controll : MonoBehaviour
                 player.transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * rotateSpeed * angleSpeed);
 
                 //Giro decorativo
-                if (playerMesh.transform.localEulerAngles.z < angleMaxZ || playerMesh.transform.localEulerAngles.z > 180)
+                if (isSanta)
                 {
-                    playerMesh.transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * rotateSpeed * angleSpeed);
+                    turnLeft();
                 }
+                else
+                {
+                    turnRight();
+                };
             }
             //Movimiento hacia delante
             player.transform.localPosition += player.transform.forward * Time.deltaTime * frontSpeed;
+        }
+    }
+
+    public void turnRight()
+    {
+        if (playerMesh.transform.localEulerAngles.z > (360 - angleMaxZ) || playerMesh.transform.localEulerAngles.z < 180)
+        {
+            playerMesh.transform.Rotate(new Vector3(0, 0, -1) * Time.deltaTime * rotateSpeed * angleSpeed);
+        }
+    }
+
+    public void turnLeft()
+    {
+        //Giro decorativo
+        if (playerMesh.transform.localEulerAngles.z < angleMaxZ || playerMesh.transform.localEulerAngles.z > 180)
+        {
+            playerMesh.transform.Rotate(new Vector3(0, 0, 1) * Time.deltaTime * rotateSpeed * angleSpeed);
         }
     }
 
@@ -182,12 +210,14 @@ public class Controll : MonoBehaviour
         {
             //papa noel
             playerMesh = playerMeshes[0];
+            isSanta = true;
 
         }
         else
         {
             //rey mago random
             playerMesh = playerMeshes[UnityEngine.Random.Range(1,4)];
+            isSanta = false;
         }
 
         for (int i = 0; i < playerMeshes.Count; i++)
@@ -206,6 +236,10 @@ public class Controll : MonoBehaviour
     public void CheckDateFake() //solo para testear
     {
         playerMesh = playerMeshes[UnityEngine.Random.Range(0, 4)];
+        if (playerMesh != playerMeshes[0])
+        {
+            isSanta = false;
+        }
 
         for (int i = 0; i < playerMeshes.Count; i++)
         {

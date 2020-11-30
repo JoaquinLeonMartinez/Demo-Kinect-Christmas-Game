@@ -113,7 +113,7 @@ public class BodyReader : MonoBehaviour
         if (userDetected && HandLeftPos.y > (HandRightPos.y + Threshold))//HandLeftPos.y > (InitialYPositionLeft + Threshold
         {
             //float difference =  HandLeftPos.y > (HandRightPos.y + Threshold);
-            stopLeft.Invoke();
+            
             //giramos a la derecha en este caso
             //onRight.Invoke();
             float rotation = HandLeftPos.y - (HandRightPos.y + Threshold);
@@ -121,12 +121,13 @@ public class BodyReader : MonoBehaviour
             {
                 rotation = rotationLimit;
             }
+            stopLeft.Invoke();
             controll.MoveRight(rotation * 0.4f);
 
         }
         else if (userDetected && HandLeftPos.y < (HandRightPos.y - Threshold))
         {
-            stopRight.Invoke();
+            
             //giramos a la izq
             //onLeft.Invoke();
             float rotation = (HandRightPos.y - Threshold) - HandLeftPos.y;
@@ -134,6 +135,7 @@ public class BodyReader : MonoBehaviour
             {
                 rotation = rotationLimit;
             }
+            stopRight.Invoke();
             controll.MoveLeft(rotation*0.4f);
         }
         /*else if(userDetected && HandLeftPos.y > (HandRightPos.y - Threshold) && HandLeftPos.y < (HandRightPos.y + Threshold))

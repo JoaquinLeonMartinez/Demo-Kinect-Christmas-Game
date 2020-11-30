@@ -76,8 +76,8 @@ public class GameManager : MonoBehaviour
         spawnGenerator.GenerateSpawners(numOfSpawners); //Generamos los nuevos puntos de spawn
         SetupPresentsPoints(); // Guardamos los hijos del parent en la lista
 
-        Debug.Log($"Vamos a distribuir los regalos con los siguientes parametros: numOfSpawners: {numOfSpawners}, maxPresents: {maxPresents}");
-        Debug.Log($"maxPresentsScoreActual = {maxPresentsScore} - LeftBig = {this.GetComponent<PricesManager>().leftBigPrices} - LeftMedium = {this.GetComponent<PricesManager>().leftMediumPrices} - LeftSmall = {this.GetComponent<PricesManager>().leftSmallPrices}");
+        //Debug.Log($"Vamos a distribuir los regalos con los siguientes parametros: numOfSpawners: {numOfSpawners}, maxPresents: {maxPresents}");
+        //Debug.Log($"maxPresentsScoreActual = {maxPresentsScore} - LeftBig = {this.GetComponent<PricesManager>().leftBigPrices} - LeftMedium = {this.GetComponent<PricesManager>().leftMediumPrices} - LeftSmall = {this.GetComponent<PricesManager>().leftSmallPrices}");
         if (CheckGameRules()) //comprobamos que los valores sean coherentes
         {
             //Debug.Log("Los parametros son correctos, vamos a generar los collectible");
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Los parametros no son correctos hulio");
+            Debug.LogError("Los parametros no son correctos hulio");
         }
         //ENDGAMEPLAY
         //UI
@@ -246,7 +246,7 @@ public class GameManager : MonoBehaviour
         }
         //Debug.Log($"Suma final de los que restan de un punto: smallPresents: {smallPresents} + points to distribute restantes: {pointsToDistribute}");
         //smallPresents += pointsToDistribute; //esto sumara 0 en caso de haberlos distribuido todos antes
-        Debug.Log($"Se han distribuido correctamente los valores de los regalos, small = {smallPresents} , medium = {mediumPresents} , big = {bigPresents}");
+        //Debug.Log($"Se han distribuido correctamente los valores de los regalos, small = {smallPresents} , medium = {mediumPresents} , big = {bigPresents}");
 
     }
 
@@ -286,7 +286,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        Debug.Log("Se han generado correctamente los regalos");
+        //Debug.Log("Se han generado correctamente los regalos");
 
         for (int i = 0; i < auxList.Count; i++) //volvemos a completar la lista original
         {
@@ -303,7 +303,7 @@ public class GameManager : MonoBehaviour
         //Debug.Log($"Numero de spawners: {collectiblePoints.Count}");
         if (!(maxPresents <= collectiblePoints.Count))
         {
-            Debug.Log($"No cuadra la energia con el nuemro de slots disponible en el escenario, energia = {maxEnergyInScenario} , maxPresents = {maxPresents} , slots = {collectiblePoints.Count}");
+            //Debug.Log($"No cuadra la energia con el nuemro de slots disponible en el escenario, energia = {maxEnergyInScenario} , maxPresents = {maxPresents} , slots = {collectiblePoints.Count}");
             correct = false;
             return correct;
         }
@@ -314,7 +314,7 @@ public class GameManager : MonoBehaviour
     {
         collectiblePoints.Clear();
 
-        Debug.Log($"Se ha borrado la lista de spawners: {collectiblePoints.Count}");
+        //Debug.Log($"Se ha borrado la lista de spawners: {collectiblePoints.Count}");
     }
 
     public void ResetRings()
