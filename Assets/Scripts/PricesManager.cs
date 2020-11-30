@@ -32,6 +32,8 @@ public class PricesManager : MonoBehaviour
     [SerializeField] Text big;
     [SerializeField] Text date;
 
+    [SerializeField] UI_Manager ui_manager;
+
     Dictionary<DateTime, DayPrices> pricesPerDay = new Dictionary<DateTime, DayPrices>();
 
     void Start()
@@ -156,6 +158,11 @@ public class PricesManager : MonoBehaviour
         PlayerPrefs.Save();
     }
 
+    public void disablePrices()
+    {
+        ui_manager.disablePrices();
+    }
+
     public Price CheckScore(int score)
     {
         //Este metodo lo llamamos cuando acaba la partida
@@ -171,6 +178,7 @@ public class PricesManager : MonoBehaviour
                 leftBigPrices--;
                 price = Price.big;
                 GameManager.Instance.finalMessage = "Premio grande";
+                ui_manager.bigPriceText.SetActive(true);
             }
             else
             {
@@ -185,6 +193,7 @@ public class PricesManager : MonoBehaviour
                 price = Price.medium;
                 leftMediumPrices--;
                 GameManager.Instance.finalMessage = "Premio mediano";
+                ui_manager.mediumPriceText.SetActive(true);
             }
             else if (leftBigPrices > 0)
             {
@@ -192,6 +201,7 @@ public class PricesManager : MonoBehaviour
                 leftBigPrices--;
                 price = Price.big;
                 GameManager.Instance.finalMessage = "Premio grande";
+                ui_manager.bigPriceText.SetActive(true);
             }
         }
         else if (score >= targetScoreSmall)
@@ -202,6 +212,7 @@ public class PricesManager : MonoBehaviour
                 price = Price.small;
                 leftSmallPrices--;
                 GameManager.Instance.finalMessage = "Premio pequeño";
+                ui_manager.smallPriceText.SetActive(true);
             }
             else if (leftMediumPrices > 0) //primero comprobamos si quedan regalos medianos (es el mas cercano al pequeño)
             {
@@ -209,6 +220,7 @@ public class PricesManager : MonoBehaviour
                 price = Price.medium;
                 leftMediumPrices--;
                 GameManager.Instance.finalMessage = "Premio mediano";
+                ui_manager.mediumPriceText.SetActive(true);
 
             }
             else if (leftBigPrices > 0)
@@ -218,6 +230,7 @@ public class PricesManager : MonoBehaviour
                 leftBigPrices--;
                 price = Price.big;
                 GameManager.Instance.finalMessage = "Premio grande";
+                ui_manager.bigPriceText.SetActive(true);
             }
         }
         else

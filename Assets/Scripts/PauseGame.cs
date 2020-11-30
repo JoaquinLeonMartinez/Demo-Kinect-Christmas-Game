@@ -22,7 +22,7 @@ public class PauseGame : MonoBehaviour
     private void Start()
     {
         maxTimeWaiting = 5f;
-        maxTimeEndMenu = 5f;
+        maxTimeEndMenu = 10f;
         maxTimeInitMenu = 5f;
         timerEndGame = maxTimeEndMenu;
         FindMenu();
@@ -84,7 +84,6 @@ public class PauseGame : MonoBehaviour
         state = MenuState.initScreen;
         gameActive = false;
         initMenu.SetActive(true);
-        endScreen.SetActive(false);
         pauseMenu.SetActive(false);
         Time.timeScale = 0;
     }
@@ -114,6 +113,8 @@ public class PauseGame : MonoBehaviour
     {
         state = MenuState.pauseScreen;
         gameActive = false;
+        this.GetComponent<PricesManager>().disablePrices();
+        endScreen.SetActive(false);
         pauseMenu.SetActive(true);
         initMenu.SetActive(false);
         Time.timeScale = 1;

@@ -8,6 +8,11 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] Text scoreText;
     [SerializeField] Text finalScoreText;
     [SerializeField] Text finalMessage;
+
+    public GameObject smallPriceText;
+    public GameObject mediumPriceText;
+    public GameObject bigPriceText;
+
     void Start()
     {
         //scoreText.text = "Score: 0 / 0"; // no hace falta ya que el propio game manager es el encargado de actualizarlo al inicio
@@ -16,6 +21,13 @@ public class UI_Manager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void disablePrices()
+    {
+        smallPriceText.SetActive(false);
+        mediumPriceText.SetActive(false);
+        bigPriceText.SetActive(false);
     }
 
     public void UpdateScore(int currentScore, int maxScore)
