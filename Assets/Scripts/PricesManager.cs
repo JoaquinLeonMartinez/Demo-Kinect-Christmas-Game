@@ -52,6 +52,8 @@ public class PricesManager : MonoBehaviour
         pricesPerDay.Add(new DateTime(2020, 11, 30), new DayPrices(5, 3, 2));
         pricesPerDay.Add(new DateTime(2020, 12, 01), new DayPrices(5, 3, 2));
         pricesPerDay.Add(new DateTime(2020, 12, 02), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 12, 03), new DayPrices(5, 3, 2));
+        pricesPerDay.Add(new DateTime(2020, 12, 04), new DayPrices(5, 3, 2));
 
         //A partir de aqui son los reales
         pricesPerDay.Add(new DateTime(2020, 12, 11), new DayPrices(8, 3, 2));
@@ -179,6 +181,8 @@ public class PricesManager : MonoBehaviour
                 price = Price.big;
                 GameManager.Instance.finalMessage = "Premio grande";
                 ui_manager.bigPriceText.SetActive(true);
+                ui_manager.price = 3;
+                
             }
             else
             {
@@ -194,6 +198,7 @@ public class PricesManager : MonoBehaviour
                 leftMediumPrices--;
                 GameManager.Instance.finalMessage = "Premio mediano";
                 ui_manager.mediumPriceText.SetActive(true);
+                ui_manager.price = 2;
             }
             else if (leftBigPrices > 0)
             {
@@ -202,6 +207,7 @@ public class PricesManager : MonoBehaviour
                 price = Price.big;
                 GameManager.Instance.finalMessage = "Premio grande";
                 ui_manager.bigPriceText.SetActive(true);
+                ui_manager.price = 3;
             }
         }
         else if (score >= targetScoreSmall)
@@ -213,6 +219,7 @@ public class PricesManager : MonoBehaviour
                 leftSmallPrices--;
                 GameManager.Instance.finalMessage = "Premio pequeño";
                 ui_manager.smallPriceText.SetActive(true);
+                ui_manager.price = 1;
             }
             else if (leftMediumPrices > 0) //primero comprobamos si quedan regalos medianos (es el mas cercano al pequeño)
             {
@@ -221,6 +228,7 @@ public class PricesManager : MonoBehaviour
                 leftMediumPrices--;
                 GameManager.Instance.finalMessage = "Premio mediano";
                 ui_manager.mediumPriceText.SetActive(true);
+                ui_manager.price = 2;
 
             }
             else if (leftBigPrices > 0)
@@ -231,11 +239,18 @@ public class PricesManager : MonoBehaviour
                 price = Price.big;
                 GameManager.Instance.finalMessage = "Premio grande";
                 ui_manager.bigPriceText.SetActive(true);
+                ui_manager.price = 3;
             }
         }
         else
         {
-            GameManager.Instance.finalMessage = "Premios conseguidos: ninguno, vete a tu casa";
+            ui_manager.price = 0;
+            //GameManager.Instance.finalMessage = "Premios conseguidos: ninguno, vete a tu casa";
+            /*
+             Enhorabuena, has conseguido X puntos y un vale descuento de X dinero.
+                Y entrar al sorteo de 50€ en compras más dos entradas de cine mensuales durante todo un año.
+                Además, te llevas nuestro portamascarillas.
+             */
         }
 
         //Entre partida y partida esto ya lo esta llamando el propio manager, por lo tanto n oes necesario llamarlo aqui

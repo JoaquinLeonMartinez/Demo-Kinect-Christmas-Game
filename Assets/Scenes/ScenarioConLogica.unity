@@ -339,7 +339,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1116521132}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1732,7 +1732,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -33.8, y: 32.8}
+  m_AnchoredPosition: {x: -33.80005, y: 32.799988}
   m_SizeDelta: {x: 63.600388, y: 63.600388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &193867688
@@ -4653,12 +4653,12 @@ GameObject:
   - component: {fileID: 486234660}
   - component: {fileID: 486234659}
   m_Layer: 0
-  m_Name: ScorePointsText
+  m_Name: Text1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &486234658
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4673,10 +4673,10 @@ RectTransform:
   m_Father: {fileID: 1116521132}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 171.08, y: 176.86}
-  m_SizeDelta: {x: 342.16736, y: 34.267883}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 7.1700134, y: 45.22}
+  m_SizeDelta: {x: 743.74756, y: 90.4393}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &486234659
 MonoBehaviour:
@@ -4699,19 +4699,21 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 22
+    m_Font: {fileID: 12800000, guid: 4593271b7228f164280c796dac6289b1, type: 3}
+    m_FontSize: 21
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 224
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Puntos conseguidos: 0'
+  m_Text: 'Has conseguido X puntos y un vale descuento de X dinero.
+
+'
 --- !u!222 &486234660
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5218,7 +5220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &537269491
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5232,7 +5234,7 @@ RectTransform:
   m_Children:
   - {fileID: 1477853550}
   m_Father: {fileID: 1116521132}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -10568,6 +10570,86 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4055538914070769341, guid: 8fdfac78f50cd3a4194b379d51e4030c, type: 3}
   m_PrefabInstance: {fileID: 1010475725}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1026394897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026394898}
+  - component: {fileID: 1026394900}
+  - component: {fileID: 1026394899}
+  m_Layer: 0
+  m_Name: Text2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1026394898
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026394897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1116521132}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 7.1700134, y: -50}
+  m_SizeDelta: {x: 743.74756, y: 90.4393}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1026394899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026394897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8624314, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 4593271b7228f164280c796dac6289b1, type: 3}
+    m_FontSize: 21
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 224
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Entras al sorteo de 50\u20AC en compras m\xE1s dos entradas de cine mensuales
+    durante todo un a\xF1o.\r\nAdem\xE1s, te llevas nuestro portamascarillas."
+--- !u!222 &1026394900
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026394897}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1028235748
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11291,6 +11373,7 @@ RectTransform:
   - {fileID: 193867687}
   - {fileID: 939768426}
   - {fileID: 486234658}
+  - {fileID: 1026394898}
   - {fileID: 1455851544}
   - {fileID: 537269491}
   - {fileID: 16581736}
@@ -20078,7 +20161,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1116521132}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
@@ -24477,7 +24560,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -33.8, y: 32.8}
+  m_AnchoredPosition: {x: -33.80005, y: 32.799988}
   m_SizeDelta: {x: 63.600388, y: 63.600388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1938627327
@@ -24534,7 +24617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1939974547
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24552,7 +24635,7 @@ RectTransform:
   - {fileID: 2123688454}
   - {fileID: 1585079275}
   m_Father: {fileID: 1116521132}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25663,11 +25746,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1477853551}
-  finalScoreText: {fileID: 486234659}
+  finalScoreTextPointsAndPrices: {fileID: 486234659}
+  finalScoreTextBase: {fileID: 1026394899}
   finalMessage: {fileID: 1455851545}
   smallPriceText: {fileID: 1418364868}
   mediumPriceText: {fileID: 2123688453}
   bigPriceText: {fileID: 1585079272}
+  price: 0
 --- !u!1001 &2043836972
 PrefabInstance:
   m_ObjectHideFlags: 0
