@@ -58,7 +58,7 @@ public class PauseGame : MonoBehaviour
         }
 
         //Si lleva mas de 5 segundos sin detectar a nadie y el juego esta corriendo se activa este menu
-        if (MenuState.gameScreen == state && GameManager.Instance.GetTimeWaiting() > maxTimeWaiting && false) //de momento no queremos que entre aqui
+        if (MenuState.gameScreen == state && GameManager.Instance.GetTimeWaiting() > maxTimeWaiting) //de momento no queremos que entre aqui
         {
             Debug.Log("Lleva mucho tiempo sin encontrar a nadie");
             //esto debe ser entrar al menu de pausa

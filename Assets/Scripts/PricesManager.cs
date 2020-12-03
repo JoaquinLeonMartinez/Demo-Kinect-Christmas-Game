@@ -39,42 +39,32 @@ public class PricesManager : MonoBehaviour
     void Start()
     {
         //19 dias-- Repartir:
-        //hay 140 (entre 100 y 150 puntos) (7 DIAS DEBE HABER 8 REGALOS Y EL RESTO 7 REGALOS)
-        //hay 50 (entre 150 y 200 puntos) (12 DIAS DEBE HABER 3 REGALOS Y EL RESTO 2 REGALOS)
-        //hay 30 (mas de 200 puntos) (11 DIAS DEBE HABER 2 REGALOS Y EL RESTO 1 REGALOS)
-        pricesPerDay.Add(new DateTime(2020, 11, 19), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 11, 20), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 11, 23), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 11, 24), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 11, 25), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 11, 26), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 11, 27), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 11, 30), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 01), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 02), new DayPrices(5, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 03), new DayPrices(5, 3, 2));
+        //hay 140 (entre 100 y 150 puntos) (los dias completos hay 9, los dias de medio dia hay 4 y los dias de tarde hay 5) (4*5 + 3*4 + 9 * 12 = 140)
+        //hay 50 (entre 150 y 200 puntos) (los dias completos hay 3 y los medios dias hay 2) (12*3 + 7*2 = 50)
+        //hay 30 (mas de 200 puntos) (dias completos hay 2 (excepto un dia que solo hay uno) y dias a medias hay 1) (12*2) - 1 + 7*1 = 30
+
         pricesPerDay.Add(new DateTime(2020, 12, 04), new DayPrices(5, 3, 2));
 
         //A partir de aqui son los reales
-        pricesPerDay.Add(new DateTime(2020, 12, 11), new DayPrices(8, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 12), new DayPrices(8, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 13), new DayPrices(8, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 14), new DayPrices(8, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 15), new DayPrices(8, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 16), new DayPrices(8, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 17), new DayPrices(8, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 18), new DayPrices(7, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 19), new DayPrices(7, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 20), new DayPrices(7, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 21), new DayPrices(7, 3, 2));
-        pricesPerDay.Add(new DateTime(2020, 12, 22), new DayPrices(7, 3, 1));
-        pricesPerDay.Add(new DateTime(2020, 12, 23), new DayPrices(7, 2, 1));
-        pricesPerDay.Add(new DateTime(2020, 12, 24), new DayPrices(7, 2, 1));
-        pricesPerDay.Add(new DateTime(2020, 12, 25), new DayPrices(7, 2, 1));
-        pricesPerDay.Add(new DateTime(2020, 12, 26), new DayPrices(7, 2, 1));
-        pricesPerDay.Add(new DateTime(2020, 12, 27), new DayPrices(7, 2, 1));
-        pricesPerDay.Add(new DateTime(2020, 12, 28), new DayPrices(7, 2, 1));
-        pricesPerDay.Add(new DateTime(2020, 12, 29), new DayPrices(7, 2, 1));
+        pricesPerDay.Add(new DateTime(2020, 12, 11), new DayPrices(5, 2, 1));
+        pricesPerDay.Add(new DateTime(2020, 12, 12), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 13), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 18), new DayPrices(4, 2, 1));
+        pricesPerDay.Add(new DateTime(2020, 12, 19), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 20), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 21), new DayPrices(5, 2, 1));
+        pricesPerDay.Add(new DateTime(2020, 12, 22), new DayPrices(5, 2, 1));
+        pricesPerDay.Add(new DateTime(2020, 12, 23), new DayPrices(5, 2, 1));
+        pricesPerDay.Add(new DateTime(2020, 12, 24), new DayPrices(4, 2, 1));
+        pricesPerDay.Add(new DateTime(2020, 12, 26), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 28), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 29), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 30), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2020, 12, 31), new DayPrices(4, 2, 1));
+        pricesPerDay.Add(new DateTime(2021, 01, 02), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2021, 01, 03), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2021, 01, 04), new DayPrices(9, 3, 2));// Dia completo
+        pricesPerDay.Add(new DateTime(2021, 01, 05), new DayPrices(9, 3, 1));// Dia completo
 
         LoadLastCheck(); //Cargamos de fichero la fecha del ultimo check que se hizo
         //lastCheck = DateTime.Today;
