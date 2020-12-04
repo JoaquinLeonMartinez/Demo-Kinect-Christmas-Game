@@ -56,8 +56,8 @@ public class Controll : MonoBehaviour
     void Start()
     {
         christmasEveDate = new DateTime(2020, 12, 25);
-        //CheckDate();
-        CheckDateFake();
+        CheckDate();
+        //CheckDateFake();
         angleMaxZ = 40f;
         angleSpeed = 1f;
         //rb = player.GetComponent<Rigidbody>(); //No se usara de momento ya que no se puede saltar
